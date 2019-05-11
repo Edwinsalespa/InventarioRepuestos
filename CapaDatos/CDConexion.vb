@@ -1,15 +1,15 @@
 ﻿Imports System
 Imports System.Data
 Imports System.Configuration
-Imports System.Data.SqlServerCe
+Imports MySql.Data.MySqlClient
 
 
 Public Class CDConexion
 
-    Dim conexion As SqlCeConnection
+    Dim conexion As MySqlConnection
 
-    Public Function conectarBD() As SqlCeConnection
-        conexion = New SqlCeConnection(ConfigurationManager.ConnectionStrings("InventarioRepuestosConnectionString").ConnectionString)
+    Public Function conectarBD() As MySqlConnection
+        conexion = New MySqlConnection(ConfigurationManager.ConnectionStrings("MYSQLConnectionString").ConnectionString)
         Return conexion
     End Function
 

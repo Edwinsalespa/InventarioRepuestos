@@ -13,7 +13,11 @@ C:\Users\Cristhian Forero\Documents\Visual Studio 2010\Projects\SistemaInventari
 C:\Users\Cristhian Forero\Documents\Visual Studio 2010\Projects\SistemaInventarioRepuestos\CapaPresentacion\obj\x86\Debug\CapaPresentacion.exe
 C:\Users\Cristhian Forero\Documents\Visual Studio 2010\Projects\SistemaInventarioRepuestos\CapaPresentacion\obj\x86\Debug\CapaPresentacion.xml
 C:\Users\Cristhian Forero\Documents\Visual Studio 2010\Projects\SistemaInventarioRepuestos\CapaPresentacion\obj\x86\Debug\CapaPresentacion.pdb
-C:\Users\Cristhian Forero\Documents\Visual Studio 2010\Projects\SistemaInventarioRepuestos\CapaPresentacion\bin\Debug\Inventario.sdf
-C:\Users\Cristhian Forero\Documents\Visual Studio 2010\Projects\SistemaInventarioRepuestos\CapaPresentacion\bin\Debug\CapaPresentacion.exe.config
 C:\Users\Cristhian Forero\Documents\Visual Studio 2010\Projects\SistemaInventarioRepuestos\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmLogin.resources
 C:\Users\Cristhian Forero\Documents\Visual Studio 2010\Projects\SistemaInventarioRepuestos\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmUsuarios.resources
+C:\Users\Cristhian Forero\Documents\Visual Studio 2010\Projects\SistemaInventarioRepuestos\CapaPresentacion\bin\Debug\InventarioRepuestos.sdf
+C:\Users\Cristhian Forero\Documents\Visual Studio 2010\Projects\SistemaInventarioRepuestos\CapaPresentacion\bin\Debug\CapaPresentacion.exe.config
+C:\Users\Cristhian Forero\Desktop\SistemaInventarioRepuestos\CapaPresentacion\bin\Debug\CapaPresentacion.exe.config
+C:\Users\Cristhian Forero\Desktop\SistemaInventarioRepuestos\CapaPresentacion\obj\x86\Debug\CapaPresentacion.exe
+C:\Users\Cristhian Forero\Desktop\SistemaInventarioRepuestos\CapaPresentacion\obj\x86\Debug\CapaPresentacion.xml
+C:\Users\Cristhian Forero\Desktop\SistemaInventarioRepuestos\CapaPresentacion\obj\x86\Debug\CapaPresentacion.pdb

@@ -101,8 +101,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BaseDeDatos\CapaDatos.vbproj">
-      <Project>{7BE1B125-02A6-436A-B198-2945D6317DB7}</Project>
+    <ProjectReference Include="..\CapaDatos\CapaDatos.vbproj">
+      <Project>{3AEB1760-7D1E-4D1A-A08F-268D3699AD0C}</Project>
       <Name>CapaDatos</Name>
     </ProjectReference>
   </ItemGroup>

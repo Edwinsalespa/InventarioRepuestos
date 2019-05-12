@@ -3,6 +3,8 @@
 Public Class FrmLogin
 
     Dim Usuario As New CNUsuarios
+    Dim DatosUsuario As New ArrayList
+    Friend Nombre, Apellido, Rol As String
 
 
     Private Sub BtnLogin_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnLogin.Click
@@ -12,12 +14,15 @@ Public Class FrmLogin
     Sub Login()
         Dim Cedula As Integer
         Dim Contraseña As String
-        Dim DatosUsuario As New ArrayList
 
         Cedula = Val(TxtUsuario.Text)
         Contraseña = TxtContraseña.Text
 
         DatosUsuario = Usuario.loginUsuarios(Cedula, Contraseña)
+
+        Nombre = DatosUsuario.Item(1)
+        Apellido = DatosUsuario.Item(2)
+        Rol = DatosUsuario.Item(3)
 
         If DatosUsuario.Count <> 0 Then
             'Limpiar Campos del formulario
@@ -25,8 +30,9 @@ Public Class FrmLogin
             TxtContraseña.Text = ""
             Me.Hide()
             MsgBox("¡Hola" & " " & " " & DatosUsuario.Item(1) & " " & DatosUsuario.Item(2) & "!")
+
             'Mostrar el formulario correspondiente al Rol de usuario que inicia sesión
-            If DatosUsuario.Item(3) = "ADMIN" Then
+            If Rol = "ADMIN" Then
                 FrmIndexAdmin.Show()
             Else
                 FrmIndexBasico.Show()
@@ -40,4 +46,9 @@ Public Class FrmLogin
 
     End Sub
     
+    Private Sub FrmLogin_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Nombre = ""
+        Apellido = ""
+        Rol = ""
+    End Sub
 End Class

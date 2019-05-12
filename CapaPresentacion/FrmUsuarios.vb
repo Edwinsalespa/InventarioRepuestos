@@ -7,8 +7,8 @@ Public Class FrmUsuarios
     End Sub
 
     Sub listarUsuarios()
-        Dim usuario As New CNUsuarios
-        DataGridView1.DataSource = usuario.listarUsuarios.Tables("Usuarios")
+        Dim Usuario As New CNUsuarios
+        DataGridViewUsuarios.DataSource = Usuario.listarUsuarios.Tables("Usuarios")
     End Sub
 
 End Class

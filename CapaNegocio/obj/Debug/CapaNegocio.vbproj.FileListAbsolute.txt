@@ -36,3 +36,6 @@ C:\Users\Cristhian Forero\Desktop\InventarioRepuestos\CapaNegocio\obj\Debug\Capa
 C:\Users\Cristhian Forero\Desktop\InventarioRepuestos\CapaNegocio\obj\Debug\CapaNegocio.dll
 C:\Users\Cristhian Forero\Desktop\InventarioRepuestos\CapaNegocio\obj\Debug\CapaNegocio.xml
 C:\Users\Cristhian Forero\Desktop\InventarioRepuestos\CapaNegocio\obj\Debug\CapaNegocio.pdb
+C:\Users\Cristhian Forero\Desktop\InventarioRepuestos\CapaNegocio\bin\Debug\CapaEntidad.dll
+C:\Users\Cristhian Forero\Desktop\InventarioRepuestos\CapaNegocio\bin\Debug\CapaEntidad.pdb
+C:\Users\Cristhian Forero\Desktop\InventarioRepuestos\CapaNegocio\bin\Debug\CapaEntidad.xml

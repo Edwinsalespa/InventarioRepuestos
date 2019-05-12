@@ -22,9 +22,9 @@ Partial Class FrmUsuarios
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.DataGridViewUsuarios = New System.Windows.Forms.DataGridView()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
@@ -40,8 +40,23 @@ Partial Class FrmUsuarios
         Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
         Me.TBTSesion = New System.Windows.Forms.ToolStripSplitButton()
         Me.TBTStkRes = New System.Windows.Forms.ToolStripButton()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.BtnRegUsuario = New System.Windows.Forms.Button()
+        Me.TextBoxReContraseña = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.TextBoxContraseña = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.TextBoxCedula = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.TextBoxApellido = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.TextBoxNombre = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.BtnEditar = New System.Windows.Forms.Button()
+        Me.BtnEliminar = New System.Windows.Forms.Button()
         CType(Me.DataGridViewUsuarios, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip1.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'DataGridViewUsuarios
@@ -53,14 +68,14 @@ Partial Class FrmUsuarios
         Me.DataGridViewUsuarios.BackgroundColor = System.Drawing.Color.GhostWhite
         Me.DataGridViewUsuarios.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DataGridViewUsuarios.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.MidnightBlue
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.AliceBlue
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewUsuarios.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.MidnightBlue
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.AliceBlue
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewUsuarios.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
         Me.DataGridViewUsuarios.ColumnHeadersHeight = 30
         Me.DataGridViewUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.DataGridViewUsuarios.EnableHeadersVisualStyles = False
@@ -68,31 +83,31 @@ Partial Class FrmUsuarios
         Me.DataGridViewUsuarios.Location = New System.Drawing.Point(12, 136)
         Me.DataGridViewUsuarios.Name = "DataGridViewUsuarios"
         Me.DataGridViewUsuarios.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.GhostWhite
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.DarkGray
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewUsuarios.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.GhostWhite
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.DarkGray
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewUsuarios.RowHeadersDefaultCellStyle = DataGridViewCellStyle8
         Me.DataGridViewUsuarios.RowHeadersVisible = False
         Me.DataGridViewUsuarios.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.GhostWhite
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White
-        Me.DataGridViewUsuarios.RowsDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle9.BackColor = System.Drawing.Color.GhostWhite
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White
+        Me.DataGridViewUsuarios.RowsDefaultCellStyle = DataGridViewCellStyle9
         Me.DataGridViewUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridViewUsuarios.Size = New System.Drawing.Size(656, 251)
+        Me.DataGridViewUsuarios.Size = New System.Drawing.Size(406, 251)
         Me.DataGridViewUsuarios.TabIndex = 0
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(25, 96)
+        Me.Label1.Location = New System.Drawing.Point(12, 95)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(156, 18)
         Me.Label1.TabIndex = 2
@@ -108,7 +123,7 @@ Partial Class FrmUsuarios
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(3, 4, 1, 4)
         Me.ToolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-        Me.ToolStrip1.Size = New System.Drawing.Size(869, 45)
+        Me.ToolStrip1.Size = New System.Drawing.Size(953, 45)
         Me.ToolStrip1.TabIndex = 3
         Me.ToolStrip1.Text = "ToolBar"
         '
@@ -223,12 +238,157 @@ Partial Class FrmUsuarios
         Me.TBTStkRes.Text = "Stock de Repuestos"
         Me.TBTStkRes.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.BtnRegUsuario)
+        Me.GroupBox1.Controls.Add(Me.TextBoxReContraseña)
+        Me.GroupBox1.Controls.Add(Me.Label6)
+        Me.GroupBox1.Controls.Add(Me.TextBoxContraseña)
+        Me.GroupBox1.Controls.Add(Me.Label5)
+        Me.GroupBox1.Controls.Add(Me.TextBoxCedula)
+        Me.GroupBox1.Controls.Add(Me.Label4)
+        Me.GroupBox1.Controls.Add(Me.TextBoxApellido)
+        Me.GroupBox1.Controls.Add(Me.Label3)
+        Me.GroupBox1.Controls.Add(Me.TextBoxNombre)
+        Me.GroupBox1.Controls.Add(Me.Label2)
+        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.ForeColor = System.Drawing.SystemColors.MenuText
+        Me.GroupBox1.Location = New System.Drawing.Point(553, 95)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(322, 305)
+        Me.GroupBox1.TabIndex = 4
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Crear usuarios"
+        '
+        'BtnRegUsuario
+        '
+        Me.BtnRegUsuario.BackColor = System.Drawing.Color.MidnightBlue
+        Me.BtnRegUsuario.ForeColor = System.Drawing.Color.White
+        Me.BtnRegUsuario.Location = New System.Drawing.Point(18, 253)
+        Me.BtnRegUsuario.Name = "BtnRegUsuario"
+        Me.BtnRegUsuario.Size = New System.Drawing.Size(268, 39)
+        Me.BtnRegUsuario.TabIndex = 10
+        Me.BtnRegUsuario.Text = "REGISTRAR"
+        Me.BtnRegUsuario.UseVisualStyleBackColor = False
+        '
+        'TextBoxReContraseña
+        '
+        Me.TextBoxReContraseña.Location = New System.Drawing.Point(140, 207)
+        Me.TextBoxReContraseña.Name = "TextBoxReContraseña"
+        Me.TextBoxReContraseña.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.TextBoxReContraseña.Size = New System.Drawing.Size(146, 21)
+        Me.TextBoxReContraseña.TabIndex = 9
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(15, 212)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(119, 13)
+        Me.Label6.TabIndex = 8
+        Me.Label6.Text = "Repetir contraseña:"
+        '
+        'TextBoxContraseña
+        '
+        Me.TextBoxContraseña.Location = New System.Drawing.Point(140, 168)
+        Me.TextBoxContraseña.Name = "TextBoxContraseña"
+        Me.TextBoxContraseña.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.TextBoxContraseña.Size = New System.Drawing.Size(146, 21)
+        Me.TextBoxContraseña.TabIndex = 7
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(15, 173)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(75, 13)
+        Me.Label5.TabIndex = 6
+        Me.Label5.Text = "Contraseña:"
+        '
+        'TextBoxCedula
+        '
+        Me.TextBoxCedula.Location = New System.Drawing.Point(140, 127)
+        Me.TextBoxCedula.Name = "TextBoxCedula"
+        Me.TextBoxCedula.Size = New System.Drawing.Size(146, 21)
+        Me.TextBoxCedula.TabIndex = 5
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(15, 132)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(50, 13)
+        Me.Label4.TabIndex = 4
+        Me.Label4.Text = "Cédula:"
+        '
+        'TextBoxApellido
+        '
+        Me.TextBoxApellido.Location = New System.Drawing.Point(140, 86)
+        Me.TextBoxApellido.Name = "TextBoxApellido"
+        Me.TextBoxApellido.Size = New System.Drawing.Size(146, 21)
+        Me.TextBoxApellido.TabIndex = 3
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(15, 91)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(56, 13)
+        Me.Label3.TabIndex = 2
+        Me.Label3.Text = "Apellido:"
+        '
+        'TextBoxNombre
+        '
+        Me.TextBoxNombre.Location = New System.Drawing.Point(140, 46)
+        Me.TextBoxNombre.Name = "TextBoxNombre"
+        Me.TextBoxNombre.Size = New System.Drawing.Size(146, 21)
+        Me.TextBoxNombre.TabIndex = 1
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(15, 51)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(54, 13)
+        Me.Label2.TabIndex = 0
+        Me.Label2.Text = "Nombre:"
+        '
+        'BtnEditar
+        '
+        Me.BtnEditar.BackColor = System.Drawing.Color.LimeGreen
+        Me.BtnEditar.ForeColor = System.Drawing.Color.White
+        Me.BtnEditar.Location = New System.Drawing.Point(9, 403)
+        Me.BtnEditar.Name = "BtnEditar"
+        Me.BtnEditar.Size = New System.Drawing.Size(94, 33)
+        Me.BtnEditar.TabIndex = 5
+        Me.BtnEditar.Text = "EDITAR"
+        Me.BtnEditar.UseVisualStyleBackColor = False
+        '
+        'BtnEliminar
+        '
+        Me.BtnEliminar.BackColor = System.Drawing.Color.Crimson
+        Me.BtnEliminar.ForeColor = System.Drawing.Color.White
+        Me.BtnEliminar.Location = New System.Drawing.Point(109, 403)
+        Me.BtnEliminar.Name = "BtnEliminar"
+        Me.BtnEliminar.Size = New System.Drawing.Size(94, 33)
+        Me.BtnEliminar.TabIndex = 6
+        Me.BtnEliminar.Text = "ELIMINAR"
+        Me.BtnEliminar.UseVisualStyleBackColor = False
+        '
         'FrmUsuarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.GhostWhite
-        Me.ClientSize = New System.Drawing.Size(869, 526)
+        Me.ClientSize = New System.Drawing.Size(953, 526)
+        Me.Controls.Add(Me.BtnEliminar)
+        Me.Controls.Add(Me.BtnEditar)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.DataGridViewUsuarios)
@@ -237,6 +397,8 @@ Partial Class FrmUsuarios
         CType(Me.DataGridViewUsuarios, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -256,5 +418,19 @@ Partial Class FrmUsuarios
     Friend WithEvents ToolStripSeparator5 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents TBTSesion As System.Windows.Forms.ToolStripSplitButton
     Friend WithEvents TBTStkRes As System.Windows.Forms.ToolStripButton
+    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents TextBoxNombre As System.Windows.Forms.TextBox
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents TextBoxApellido As System.Windows.Forms.TextBox
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents TextBoxCedula As System.Windows.Forms.TextBox
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents TextBoxContraseña As System.Windows.Forms.TextBox
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents TextBoxReContraseña As System.Windows.Forms.TextBox
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents BtnRegUsuario As System.Windows.Forms.Button
+    Friend WithEvents BtnEditar As System.Windows.Forms.Button
+    Friend WithEvents BtnEliminar As System.Windows.Forms.Button
 
 End Class

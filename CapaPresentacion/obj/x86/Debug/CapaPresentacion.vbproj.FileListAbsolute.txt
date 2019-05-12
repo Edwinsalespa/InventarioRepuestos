@@ -59,3 +59,6 @@ C:\Users\Cristhian Forero\Desktop\InventarioRepuestos\CapaPresentacion\obj\x86\D
 C:\Users\Cristhian Forero\Desktop\InventarioRepuestos\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmUsuarios.resources
 C:\Users\Cristhian Forero\Desktop\InventarioRepuestos\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Resources.resources
 C:\Users\Cristhian Forero\Desktop\InventarioRepuestos\CapaPresentacion\obj\x86\Debug\CapaPresentacion.vbproj.GenerateResource.Cache
+C:\Users\Cristhian Forero\Desktop\InventarioRepuestos\CapaPresentacion\bin\Debug\CapaEntidad.dll
+C:\Users\Cristhian Forero\Desktop\InventarioRepuestos\CapaPresentacion\bin\Debug\CapaEntidad.pdb
+C:\Users\Cristhian Forero\Desktop\InventarioRepuestos\CapaPresentacion\bin\Debug\CapaEntidad.xml

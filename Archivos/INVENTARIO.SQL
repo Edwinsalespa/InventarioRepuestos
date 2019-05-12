@@ -8,7 +8,7 @@ CREATE TABLE USUARIOS(
   APELLIDO VARCHAR(40) NOT NULL,
   CEDULA INT(12) NOT NULL UNIQUE,
   CONTRASENA VARCHAR(10) NOT NULL,
-  ROL_ID INT NOT NULL,
+  ROL_ID INT NOT NULL DEFAULT 2,
   PRIMARY KEY(ID_USUARIO),
   FOREIGN KEY(ROL_ID) REFERENCES ROLES(ID_ROL)  
 )ENGINE=MyISAM DEFAULT CHARSET=utf8;
@@ -32,7 +32,8 @@ INSERT INTO ROLES (ID_ROL, DESCRIPCION) VALUES
 
 DELIMITER //
 CREATE PROCEDURE SP_ListarUsuarios()
-SELECT * FROM usuarios
+SELECT us.id_usuario AS ID, us.nombre, us.apellido, us.cedula, rol.descripcion as rol
+FROM usuarios us JOIN roles rol ON us.ROL_ID = rol.ID_ROL
 //
 
 DELIMITER //
@@ -42,5 +43,8 @@ usuarios us JOIN roles rol ON us.ROL_ID = rol.ID_ROL
 WHERE CEDULA = _CEDULA AND CONTRASENA = _contrasena
 //
 
+DELIMITER //
+CREATE PROCEDURE SP_CrearUsuario(_nombre VARCHAR(40), _apellido VARCHAR(10), _cedula INT, _contrasena VARCHAR(10))
+INSERT INTO usuarios(nombre, apellido, cedula, contrasena) VALUES(_nombre, _apellido, _cedula, _contrasena)
 
 

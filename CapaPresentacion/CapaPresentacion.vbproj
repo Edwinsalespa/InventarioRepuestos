@@ -170,6 +170,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CapaEntidad\CapaEntidad.vbproj">
+      <Project>{EB5A2864-6B99-4C04-AE39-AF1F095FDBFC}</Project>
+      <Name>CapaEntidad</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CapaNegocio\CapaNegocio.vbproj">
       <Project>{6BA63A30-422E-4F0F-90BF-85531AA3C11A}</Project>
       <Name>CapaNegocio</Name>

@@ -30,7 +30,7 @@ Public Class FrmIndexAdmin
 
     'Bóton de inicio
     Private Sub TBTBtnInicio_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TBTBtnInicio.Click
-        UsuarioEventos.CargarVistaRequerida(Me, Me)
+        Me.Show()
     End Sub
 
     'Botón cerrar sesión

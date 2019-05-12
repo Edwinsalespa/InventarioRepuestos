@@ -18,7 +18,7 @@ Public Class FrmLogin
         Cedula = Val(TxtUsuario.Text)
         Contraseña = TxtContraseña.Text
 
-        DatosUsuario = Usuario.loginUsuarios(Cedula, Contraseña)
+        DatosUsuario = Usuario.LoginUsuarios(Cedula, Contraseña)
 
         Nombre = DatosUsuario.Item(1)
         Apellido = DatosUsuario.Item(2)
@@ -34,8 +34,10 @@ Public Class FrmLogin
             'Mostrar el formulario correspondiente al Rol de usuario que inicia sesión
             If Rol = "ADMIN" Then
                 FrmIndexAdmin.Show()
+                Me.Close()
             Else
                 FrmIndexBasico.Show()
+                Me.Close()
             End If
 
         Else

@@ -1,17 +1,28 @@
 ﻿Imports CapaDatos
+Imports CapaEntidad
 
 Public Class CNUsuarios
 
-    Dim usuario As New CDUsuario
-    Dim usuario2 As New CDUsuario
+    Dim UsuarioListado As New CDUsuario
+    Dim UsuarioCrear As New CDUsuario
+    Dim UsuarioLogin As New CDUsuario
 
-    'Petición y envio de Datos a la Capa Datos
-    Function loginUsuarios(ByVal usuario, ByVal contraseña) As ArrayList
-        Return usuario2.loginUsuarios(usuario, contraseña)
+    'Petición y envio de Datos a la Capa Datos    
+
+    'CRUD------
+    'Listar Usuarios
+    Function ListarUsuarios() As DataSet
+        Return UsuarioListado.ListarUsuarios
     End Function
 
-    Function listarUsuarios() As DataSet
-        Return usuario.listarUsuarios
+    'Crear usuarios
+    Sub RegistroUsuario(ByVal Usuario As CEUsuario)
+        UsuarioCrear.RegistroUsuario(Usuario)
+    End Sub
+
+    'Login
+    Function LoginUsuarios(ByVal usuario, ByVal contraseña) As ArrayList
+        Return UsuarioLogin.LoginUsuarios(usuario, contraseña)
     End Function
 
     'Peticiones para cargar vistas
@@ -22,8 +33,8 @@ Public Class CNUsuarios
     End Sub
 
     Sub CargarVistaRequerida(ByVal FormularioCerrar, ByVal FormularioCargar)
-        FormularioCerrar.Hide()
         FormularioCargar.Show()
+        FormularioCerrar.Close()
     End Sub
 
     Sub CargarUsuarioEnSesion(ByVal Elemento, ByVal Nombre, ByVal Apellido, ByVal Rol)

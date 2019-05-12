@@ -8,7 +8,7 @@
 
     'Getters y Setters'
 
-    Public Property idUsuario As Integer
+    Public Property IdUsuario As Integer
         Get
             Return _idUsuario
         End Get
@@ -17,25 +17,25 @@
         End Set
     End Property
 
-    Public Property nombre As Integer
+    Public Property Nombre As String
         Get
             Return _nombre
         End Get
-        Set(ByVal value As Integer)
+        Set(ByVal value As String)
             _nombre = value
         End Set
     End Property
 
-    Public Property apellido As Integer
+    Public Property Apellido As String
         Get
             Return _apellido
         End Get
-        Set(ByVal value As Integer)
+        Set(ByVal value As String)
             _apellido = value
         End Set
     End Property
 
-    Public Property cedula As Integer
+    Public Property Cedula As Integer
         Get
             Return _cedula
         End Get
@@ -44,11 +44,11 @@
         End Set
     End Property
 
-    Public Property contraseña As Integer
+    Public Property Contraseña As String
         Get
             Return _contraseña
         End Get
-        Set(ByVal value As Integer)
+        Set(ByVal value As String)
             _contraseña = value
         End Set
     End Property

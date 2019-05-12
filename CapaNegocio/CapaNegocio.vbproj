@@ -122,6 +122,10 @@
       <Project>{3AEB1760-7D1E-4D1A-A08F-268D3699AD0C}</Project>
       <Name>CapaDatos</Name>
     </ProjectReference>
+    <ProjectReference Include="..\CapaEntidad\CapaEntidad.vbproj">
+      <Project>{EB5A2864-6B99-4C04-AE39-AF1F095FDBFC}</Project>
+      <Name>CapaEntidad</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0">

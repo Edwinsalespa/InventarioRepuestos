@@ -30,12 +30,17 @@ INSERT INTO ROLES (ID_ROL, DESCRIPCION) VALUES
 (2, 'BASICO');
 
 
-
+DELIMITER //
 CREATE PROCEDURE SP_ListarUsuarios()
 SELECT * FROM usuarios
+//
 
+DELIMITER //
 CREATE PROCEDURE SP_LoginUsuario(_cedula INT, _contrasena VARCHAR(10))
 SELECT us.id_usuario, us.nombre, us.apellido, us.cedula, us.contrasena, rol.descripcion FROM
 usuarios us JOIN roles rol ON us.ROL_ID = rol.ID_ROL
 WHERE CEDULA = _CEDULA AND CONTRASENA = _contrasena
+//
+
+
 

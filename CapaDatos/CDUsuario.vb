@@ -28,7 +28,7 @@ Public Class CDUsuario
             Adaptador.Fill(_DataSet, "Usuarios")
 
         Catch ex As Exception
-            MsgBox("Ha ocurrido un error al listar usuarios" + ex.ToString)
+            MsgBox("Ha ocurrido un error al listar usuarios" & " " & ex.Message)
 
         Finally
             'Liberar Recursos

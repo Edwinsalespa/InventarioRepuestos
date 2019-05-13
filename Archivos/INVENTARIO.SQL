@@ -7,15 +7,15 @@ CREATE TABLE USUARIOS(
   NOMBRE VARCHAR(40) NOT NULL,
   APELLIDO VARCHAR(40) NOT NULL,
   CEDULA INT(12) NOT NULL UNIQUE,
-  CONTRASENA VARCHAR(10) NOT NULL,
+  CONTRASENA VARCHAR(200) NOT NULL,
   ROL_ID INT NOT NULL DEFAULT 2,
   PRIMARY KEY(ID_USUARIO),
   FOREIGN KEY(ROL_ID) REFERENCES ROLES(ID_ROL)  
 )ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 INSERT INTO USUARIOS (ID_USUARIO, NOMBRE, APELLIDO, CEDULA, CONTRASENA, ROL_ID) VALUES
-(1, 'ADMINISTRADOR', '', 12345678, 'ADMIN', 1),
-(2, 'CRISTHIAN', 'FORERO', 01234567, '1234', 2);
+(1, 'ADMINISTRADOR', '', 12345678, 'z9oB4Y/NDLo=', 1);
+
 
 CREATE TABLE ROLES(
   ID_ROL INT(11) NOT NULL AUTO_INCREMENT,
@@ -32,19 +32,19 @@ INSERT INTO ROLES (ID_ROL, DESCRIPCION) VALUES
 
 DELIMITER //
 CREATE PROCEDURE SP_ListarUsuarios()
-SELECT us.id_usuario AS ID, us.nombre, us.apellido, us.cedula, rol.descripcion as rol
+SELECT us.id_usuario AS ID, us.nombre, us.apellido, us.cedula, us.contrasena,rol.descripcion as rol
 FROM usuarios us JOIN roles rol ON us.ROL_ID = rol.ID_ROL
 //
 
 DELIMITER //
-CREATE PROCEDURE SP_LoginUsuario(_cedula INT, _contrasena VARCHAR(10))
+CREATE PROCEDURE SP_LoginUsuario(_cedula INT, _contrasena VARCHAR(200))
 SELECT us.id_usuario, us.nombre, us.apellido, us.cedula, us.contrasena, rol.descripcion FROM
 usuarios us JOIN roles rol ON us.ROL_ID = rol.ID_ROL
 WHERE CEDULA = _CEDULA AND CONTRASENA = _contrasena
 //
 
 DELIMITER //
-CREATE PROCEDURE SP_CrearUsuario(_nombre VARCHAR(40), _apellido VARCHAR(10), _cedula INT, _contrasena VARCHAR(10))
+CREATE PROCEDURE SP_CrearUsuario(_nombre VARCHAR(40), _apellido VARCHAR(10), _cedula INT, _contrasena VARCHAR(200))
 INSERT INTO usuarios(nombre, apellido, cedula, contrasena) VALUES(_nombre, _apellido, _cedula, _contrasena)
 //
 
@@ -54,7 +54,7 @@ DELETE FROM usuarios WHERE ID_USUARIO=_id
 //
 
 DELIMITER //
-CREATE PROCEDURE SP_ActualizarUsuario(_id INT, _nombre VARCHAR(40), _apellido VARCHAR(10), _cedula INT, _contrasena VARCHAR(10))
+CREATE PROCEDURE SP_ActualizarUsuario(_id INT, _nombre VARCHAR(40), _apellido VARCHAR(10), _cedula INT, _contrasena VARCHAR(200))
 UPDATE usuarios
 SET NOMBRE=_nombre,APELLIDO=_apellido,CEDULA=_cedula, CONTRASENA=_contrasena
 WHERE ID_USUARIO=_id

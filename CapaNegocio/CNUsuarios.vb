@@ -34,9 +34,9 @@ Public Class CNUsuarios
     End Sub
 
     'Login
-    Function LoginUsuarios(ByVal usr, ByVal contraseña) As ArrayList
+    Function LoginUsuarios(ByVal EntidadUsuario As CEUsuario) As ArrayList
         Usuario = New CDUsuario
-        Return Usuario.LoginUsuarios(usr, contraseña)
+        Return Usuario.LoginUsuarios(EntidadUsuario)
     End Function
 
     'Peticiones para cargar vistas
@@ -45,6 +45,13 @@ Public Class CNUsuarios
             CargarVistaRequerida(FormularioCerrar, FormularioCargar)
         End If
     End Sub
+
+    'Encriptacion de Contraseñas
+    Function CodificarContraseña(ByVal Opcion As String, ByVal Contraseña As String) As String
+        Usuario = New CDUsuario
+        Return Usuario.CodificarContraseña(Opcion, Contraseña)
+    End Function
+
 
     Sub CargarVistaRequerida(ByVal FormularioCerrar, ByVal FormularioCargar)
         FormularioCargar.Show()

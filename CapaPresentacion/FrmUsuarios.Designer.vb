@@ -22,9 +22,9 @@ Partial Class FrmUsuarios
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.DataGridViewUsuarios = New System.Windows.Forms.DataGridView()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
@@ -41,6 +41,7 @@ Partial Class FrmUsuarios
         Me.TBTSesion = New System.Windows.Forms.ToolStripSplitButton()
         Me.TBTStkRes = New System.Windows.Forms.ToolStripButton()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.BtnCancelar = New System.Windows.Forms.Button()
         Me.BtnRegUsuario = New System.Windows.Forms.Button()
         Me.TextBoxReContraseña = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -69,14 +70,14 @@ Partial Class FrmUsuarios
         Me.DataGridViewUsuarios.BackgroundColor = System.Drawing.Color.GhostWhite
         Me.DataGridViewUsuarios.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DataGridViewUsuarios.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.MidnightBlue
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.AliceBlue
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewUsuarios.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.MidnightBlue
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.AliceBlue
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewUsuarios.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
         Me.DataGridViewUsuarios.ColumnHeadersHeight = 30
         Me.DataGridViewUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.DataGridViewUsuarios.EnableHeadersVisualStyles = False
@@ -84,22 +85,22 @@ Partial Class FrmUsuarios
         Me.DataGridViewUsuarios.Location = New System.Drawing.Point(12, 136)
         Me.DataGridViewUsuarios.Name = "DataGridViewUsuarios"
         Me.DataGridViewUsuarios.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.GhostWhite
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.DarkGray
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewUsuarios.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.GhostWhite
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.DarkGray
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewUsuarios.RowHeadersDefaultCellStyle = DataGridViewCellStyle8
         Me.DataGridViewUsuarios.RowHeadersVisible = False
         Me.DataGridViewUsuarios.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.GhostWhite
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White
-        Me.DataGridViewUsuarios.RowsDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle9.BackColor = System.Drawing.Color.GhostWhite
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White
+        Me.DataGridViewUsuarios.RowsDefaultCellStyle = DataGridViewCellStyle9
         Me.DataGridViewUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridViewUsuarios.Size = New System.Drawing.Size(406, 251)
         Me.DataGridViewUsuarios.TabIndex = 0
@@ -241,6 +242,7 @@ Partial Class FrmUsuarios
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.BtnCancelar)
         Me.GroupBox1.Controls.Add(Me.BtnRegUsuario)
         Me.GroupBox1.Controls.Add(Me.TextBoxReContraseña)
         Me.GroupBox1.Controls.Add(Me.Label6)
@@ -261,13 +263,24 @@ Partial Class FrmUsuarios
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Crear usuarios"
         '
+        'BtnCancelar
+        '
+        Me.BtnCancelar.BackColor = System.Drawing.Color.OrangeRed
+        Me.BtnCancelar.ForeColor = System.Drawing.Color.White
+        Me.BtnCancelar.Location = New System.Drawing.Point(175, 253)
+        Me.BtnCancelar.Name = "BtnCancelar"
+        Me.BtnCancelar.Size = New System.Drawing.Size(131, 39)
+        Me.BtnCancelar.TabIndex = 8
+        Me.BtnCancelar.Text = "CANCELAR"
+        Me.BtnCancelar.UseVisualStyleBackColor = False
+        '
         'BtnRegUsuario
         '
         Me.BtnRegUsuario.BackColor = System.Drawing.Color.MidnightBlue
         Me.BtnRegUsuario.ForeColor = System.Drawing.Color.White
         Me.BtnRegUsuario.Location = New System.Drawing.Point(18, 253)
         Me.BtnRegUsuario.Name = "BtnRegUsuario"
-        Me.BtnRegUsuario.Size = New System.Drawing.Size(268, 39)
+        Me.BtnRegUsuario.Size = New System.Drawing.Size(131, 39)
         Me.BtnRegUsuario.TabIndex = 10
         Me.BtnRegUsuario.Text = "REGISTRAR"
         Me.BtnRegUsuario.UseVisualStyleBackColor = False
@@ -445,5 +458,6 @@ Partial Class FrmUsuarios
     Friend WithEvents BtnEditar As System.Windows.Forms.Button
     Friend WithEvents BtnEliminar As System.Windows.Forms.Button
     Friend WithEvents LabelId As System.Windows.Forms.Label
+    Friend WithEvents BtnCancelar As System.Windows.Forms.Button
 
 End Class

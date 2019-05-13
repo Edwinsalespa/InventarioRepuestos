@@ -1,9 +1,11 @@
 ﻿Imports CapaNegocio
+Imports CapaEntidad
 
 Public Class FrmLogin
 
     Dim Usuario As New CNUsuarios
     Dim DatosUsuario As New ArrayList
+    Dim EntidadUsuario As New CEUsuario
     Friend Nombre, Apellido, Rol As String
 
 
@@ -17,34 +19,44 @@ Public Class FrmLogin
 
         Cedula = TxtUsuario.Text
         Contraseña = TxtContraseña.Text
+        EntidadUsuario.Cedula = Integer.Parse(Cedula)
+        EntidadUsuario.Contraseña = Contraseña
 
-        DatosUsuario = Usuario.LoginUsuarios(Integer.Parse(Cedula), Contraseña)
+        Try
+            DatosUsuario = Usuario.LoginUsuarios(EntidadUsuario)
 
-        Nombre = DatosUsuario.Item(1)
-        Apellido = DatosUsuario.Item(2)
-        Rol = DatosUsuario.Item(5)
+            If DatosUsuario.Count <> 0 Then
+                Nombre = DatosUsuario.Item(1)
+                Apellido = DatosUsuario.Item(2)
+                Rol = DatosUsuario.Item(5)
 
-        If Cedula.Equals(DatosUsuario.Item(3)) And Contraseña.Equals(DatosUsuario.Item(4)) Then
-            'Limpiar Campos del formulario
-            TxtUsuario.Text = ""
-            TxtContraseña.Text = ""
-            Me.Hide()
-            MsgBox("¡Hola" & " " & " " & DatosUsuario.Item(1) & " " & DatosUsuario.Item(2) & "!", MsgBoxStyle.Information, "Inicio de sesión exitoso")
+                If Cedula.Equals(DatosUsuario.Item(3)) And Contraseña.Equals(DatosUsuario.Item(4)) Then
+                    'Limpiar Campos del formulario
+                    TxtUsuario.Text = ""
+                    TxtContraseña.Text = ""
+                    Me.Hide()
+                    MsgBox("¡Hola" & " " & " " & DatosUsuario.Item(1) & " " & DatosUsuario.Item(2) & "!", MsgBoxStyle.OkOnly, "Inicio de sesión exitoso")
 
-            'Mostrar el formulario correspondiente al Rol de usuario que inicia sesión
-            If Rol = "ADMIN" Then
-                FrmIndexAdmin.Show()
-                Me.Close()
+                    'Mostrar el formulario correspondiente al Rol de usuario que inicia sesión
+                    If Rol = "ADMIN" Then
+                        FrmIndexAdmin.Show()
+                        Me.Close()
+                    Else
+                        FrmIndexBasico.Show()
+                        Me.Close()
+                    End If
+                Else
+                    MsgBox("El usuario existe pero la contraseña esta errada", MsgBoxStyle.Exclamation, "Alerta")
+                    TxtContraseña.Text = ""
+                End If
             Else
-                FrmIndexBasico.Show()
-                Me.Close()
+                MsgBox("Credenciales incorrectas", MsgBoxStyle.Exclamation, "Alerta")
+                TxtUsuario.Text = ""
+                TxtContraseña.Text = ""
             End If
-
-        Else
-            MsgBox("Credenciales incorrectas")
-            TxtUsuario.Text = ""
-            TxtContraseña.Text = ""
-        End If
+        Catch ex As Exception
+            MsgBox("Ha ocurrido un error al hacer Login: " + ex.Message, MsgBoxStyle.Exclamation, "Alerta")
+        End Try
 
     End Sub
     

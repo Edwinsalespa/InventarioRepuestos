@@ -109,14 +109,14 @@ Public Class FrmUsuarios
     'Editar Usuario
 
     Sub EditarUsuario()
+        Usuario = New CNUsuarios
         GroupBox1.Text = "Editar usuario"
         BtnRegUsuario.Text = "ACTUALIZAR"
         TextBoxNombre.Text = UsuarioSeleccionado(1)
         TextBoxApellido.Text = UsuarioSeleccionado(2)
         TextBoxCedula.Text = UsuarioSeleccionado(3)
-        TextBoxContraseña.Text = UsuarioSeleccionado(4)
-        TextBoxReContraseña.Text = UsuarioSeleccionado(4)
-
+        TextBoxContraseña.Text = Usuario.CodificarContraseña(2, UsuarioSeleccionado(4))
+        TextBoxReContraseña.Text = TextBoxContraseña.Text
         Editable = True
     End Sub
 
@@ -183,7 +183,6 @@ Public Class FrmUsuarios
         Next
     End Sub
 
-
     'Otros eventos------
 
     'Botón de inicio
@@ -204,4 +203,14 @@ Public Class FrmUsuarios
         Usuario.CerrarSesion(Me, FrmLogin)
     End Sub
 
+    'Botón cancelar
+    Private Sub BtnCancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnCancelar.Click
+        TextBoxNombre.Text = ""
+        TextBoxApellido.Text = ""
+        TextBoxCedula.Text = ""
+        TextBoxContraseña.Text = ""
+        TextBoxReContraseña.Text = ""
+        GroupBox1.Text = "Crear usuarios"
+        BtnRegUsuario.Text = "REGISTRAR"
+    End Sub
 End Class

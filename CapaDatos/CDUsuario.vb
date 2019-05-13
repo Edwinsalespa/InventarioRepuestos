@@ -80,12 +80,58 @@ Public Class CDUsuario
         End Try
     End Sub
 
-    Sub ActualizarUsuario()
+    Sub ActualizarUsuario(ByVal EntidadUsuario As CEUsuario)
+        Conexion = New MySqlConnection
 
+        Try
+            Conexion = ObjConexion.conectarBD
+            Conexion.Open()
+            Adaptador = New MySqlDataAdapter("SP_ActualizarUsuario", Conexion)
+            Adaptador.SelectCommand.CommandType = CommandType.StoredProcedure
+            With Adaptador.SelectCommand.Parameters
+                .Add("_id", MySqlDbType.Int32).Value = EntidadUsuario.IdUsuario
+                .Add("_nombre", MySqlDbType.VarChar).Value = EntidadUsuario.Nombre
+                .Add("_apellido", MySqlDbType.VarChar).Value = EntidadUsuario.Apellido
+                .Add("_cedula", MySqlDbType.Int32).Value = EntidadUsuario.Cedula
+                .Add("_contrasena", MySqlDbType.VarChar).Value = EntidadUsuario.Contraseña
+            End With
+
+            Adaptador.SelectCommand.ExecuteNonQuery()
+
+            MsgBox("Usuario actualizado", MsgBoxStyle.Information, "¡Operación éxitosa!")
+
+        Catch ex As Exception
+            MsgBox("Error al eliminar usuario: " + ex.Message, MsgBoxStyle.Critical, "¡Error!")
+        Finally
+            'Liberar Recursos
+            Conexion.Dispose()
+            Adaptador.Dispose()
+            Conexion.Close()
+        End Try
     End Sub
 
-    Sub EliminarUsuario()
+    Sub EliminarUsuario(ByVal EntidadUsuario As CEUsuario)
+        Conexion = New MySqlConnection
 
+        Try
+            Conexion = ObjConexion.conectarBD
+            Conexion.Open()
+            Adaptador = New MySqlDataAdapter("SP_EliminarUsuario", Conexion)
+            Adaptador.SelectCommand.CommandType = CommandType.StoredProcedure
+            Adaptador.SelectCommand.Parameters.Add("_id", MySqlDbType.Int32).Value = EntidadUsuario.IdUsuario
+
+            Adaptador.SelectCommand.ExecuteNonQuery()
+
+            MsgBox("Usuario eliminado", MsgBoxStyle.Information, "¡Operación éxitosa!")
+
+        Catch ex As Exception
+            MsgBox("Error al eliminar usuario: " + ex.Message, MsgBoxStyle.Critical, "¡Error!")
+        Finally
+            'Liberar Recursos
+            Conexion.Dispose()
+            Adaptador.Dispose()
+            Conexion.Close()
+        End Try
     End Sub
 
 
@@ -115,10 +161,12 @@ Public Class CDUsuario
             DatosTabla = _DataSet.Tables("Usuario")
 
             For Each item As DataRow In DatosTabla.Rows
-                DatosUsuario.Add(item("id"))
+                DatosUsuario.Add(item("id_usuario"))
                 DatosUsuario.Add(item("nombre"))
                 DatosUsuario.Add(item("apellido"))
-                DatosUsuario.Add(item("rol"))
+                DatosUsuario.Add(item("cedula"))
+                DatosUsuario.Add(item("contrasena"))
+                DatosUsuario.Add(item("descripcion"))
             Next
 
 

@@ -46,5 +46,18 @@ WHERE CEDULA = _CEDULA AND CONTRASENA = _contrasena
 DELIMITER //
 CREATE PROCEDURE SP_CrearUsuario(_nombre VARCHAR(40), _apellido VARCHAR(10), _cedula INT, _contrasena VARCHAR(10))
 INSERT INTO usuarios(nombre, apellido, cedula, contrasena) VALUES(_nombre, _apellido, _cedula, _contrasena)
+//
+
+DELIMITER //
+CREATE PROCEDURE SP_EliminarUsuario(_id INT)
+DELETE FROM usuarios WHERE ID_USUARIO=_id
+//
+
+DELIMITER //
+CREATE PROCEDURE SP_ActualizarUsuario(_id INT, _nombre VARCHAR(40), _apellido VARCHAR(10), _cedula INT, _contrasena VARCHAR(10))
+UPDATE usuarios
+SET NOMBRE=_nombre,APELLIDO=_apellido,CEDULA=_cedula, CONTRASENA=_contrasena
+WHERE ID_USUARIO=_id
+//
 
 

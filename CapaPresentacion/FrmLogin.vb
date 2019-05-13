@@ -15,21 +15,21 @@ Public Class FrmLogin
         Dim Cedula As Integer
         Dim Contraseña As String
 
-        Cedula = Val(TxtUsuario.Text)
+        Cedula = TxtUsuario.Text
         Contraseña = TxtContraseña.Text
 
-        DatosUsuario = Usuario.LoginUsuarios(Cedula, Contraseña)
+        DatosUsuario = Usuario.LoginUsuarios(Integer.Parse(Cedula), Contraseña)
 
         Nombre = DatosUsuario.Item(1)
         Apellido = DatosUsuario.Item(2)
-        Rol = DatosUsuario.Item(3)
+        Rol = DatosUsuario.Item(5)
 
-        If DatosUsuario.Count <> 0 Then
+        If Cedula.Equals(DatosUsuario.Item(3)) And Contraseña.Equals(DatosUsuario.Item(4)) Then
             'Limpiar Campos del formulario
             TxtUsuario.Text = ""
             TxtContraseña.Text = ""
             Me.Hide()
-            MsgBox("¡Hola" & " " & " " & DatosUsuario.Item(1) & " " & DatosUsuario.Item(2) & "!")
+            MsgBox("¡Hola" & " " & " " & DatosUsuario.Item(1) & " " & DatosUsuario.Item(2) & "!", MsgBoxStyle.Information, "Inicio de sesión exitoso")
 
             'Mostrar el formulario correspondiente al Rol de usuario que inicia sesión
             If Rol = "ADMIN" Then

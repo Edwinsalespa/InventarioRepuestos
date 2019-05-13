@@ -3,26 +3,40 @@ Imports CapaEntidad
 
 Public Class CNUsuarios
 
-    Dim UsuarioListado As New CDUsuario
-    Dim UsuarioCrear As New CDUsuario
-    Dim UsuarioLogin As New CDUsuario
+    Dim Usuario As CDUsuario
 
     'Petición y envio de Datos a la Capa Datos    
 
     'CRUD------
     'Listar Usuarios
     Function ListarUsuarios() As DataSet
-        Return UsuarioListado.ListarUsuarios
+        Usuario = New CDUsuario
+        Return Usuario.ListarUsuarios
     End Function
 
     'Crear usuarios
-    Sub RegistroUsuario(ByVal Usuario As CEUsuario)
-        UsuarioCrear.RegistroUsuario(Usuario)
+    Sub RegistroUsuario(ByVal EntidadUsuario As CEUsuario)
+        Usuario = New CDUsuario
+        Usuario.RegistroUsuario(EntidadUsuario)
+    End Sub
+
+    'Editar Usuario
+    Sub ActualizarUsuario(ByVal EntidadUsuario As CEUsuario)
+        Usuario = New CDUsuario
+        Usuario.ActualizarUsuario(EntidadUsuario)
+    End Sub
+
+
+    'Eliminar Usuario
+    Sub EliminarUsuario(ByVal EntidadUsuario As CEUsuario)
+        Usuario = New CDUsuario
+        Usuario.EliminarUsuario(EntidadUsuario)
     End Sub
 
     'Login
-    Function LoginUsuarios(ByVal usuario, ByVal contraseña) As ArrayList
-        Return UsuarioLogin.LoginUsuarios(usuario, contraseña)
+    Function LoginUsuarios(ByVal usr, ByVal contraseña) As ArrayList
+        Usuario = New CDUsuario
+        Return Usuario.LoginUsuarios(usr, contraseña)
     End Function
 
     'Peticiones para cargar vistas

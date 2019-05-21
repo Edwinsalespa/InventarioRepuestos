@@ -16,6 +16,9 @@ Public Class FrmNuevaMarca
 
         Nombre = TextBoxDescripcionMarca.Text.ToUpper
 
+        'Se deja vacio el combobox de marcas
+        FrmRepuestos.ComboBoxMarca.Items.Clear()
+
         'Validaciones de campos
         Dim ExpRegNombre = New Regex("^[a-zA-Z][a-zA-Z]*")
 
@@ -36,11 +39,12 @@ Public Class FrmNuevaMarca
             Dim Marca As New CNMarcas
             Dim EntidadMarca As New CEMarca
 
-            EntidadMarca.Descripcion = Nombre
+            EntidadMarca.Descripcion = Nombre.ToUpper
             Marca.RegistrarMarca(EntidadMarca)
-
+            FrmRepuestos.CargarMarcas()
             TextBoxDescripcionMarca.Text = ""
             Me.Close()
         End If
     End Sub
+
 End Class

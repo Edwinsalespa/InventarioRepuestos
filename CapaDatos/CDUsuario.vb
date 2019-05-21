@@ -72,7 +72,7 @@ Public Class CDUsuario
             MsgBox("Usuario registrado", MsgBoxStyle.Information, "¡Operación éxitosa!")
 
         Catch ex As Exception
-            If ex.Message.Contains("duplicate value") Then
+            If ex.Message.Contains("Duplicate entry") Then
                 MsgBox("El número de cédula ya se encuentra registrado", MsgBoxStyle.Critical, "¡Error!")
             Else
                 MsgBox("Error al crear usuario: " & ex.Message)

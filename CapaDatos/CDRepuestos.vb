@@ -21,7 +21,7 @@ Public Class CDRepuestos
             Conexion.Open()
             Adaptador = New MySqlDataAdapter("SELECT REP.ID_REPUESTO, REP.NOMBRE, REP.DESCRIPCION," +
                                              " " + "REP.IMAGEN, M.DESCRIPCION AS MARCA," +
-                                             " " + "TIP.DESCRIPCION AS TIPO" +
+                                             " " + "TIP.DESCRIPCION AS TIPO, REP.MARCA_ID" +
                                              " " + "FROM REPUESTOS REP JOIN MARCAS M ON REP.MARCA_ID=M.ID_MARCA" +
                                              " " + "JOIN TIPO_REPUESTOS TIP ON REP.TIPO_ID=TIP.ID_TIPO", Conexion)
 

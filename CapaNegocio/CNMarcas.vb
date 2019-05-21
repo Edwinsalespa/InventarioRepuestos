@@ -17,4 +17,9 @@ Public Class CNMarcas
         Marca.CrearMarca(EntidadMarca)
     End Sub
 
+    Function ListarMarcaId(ByVal EntidadMarca As CEMarca) As ArrayList
+        Marca = New CDMarca
+        Return Marca.ListarMarcasConId(EntidadMarca)
+    End Function
+
 End Class

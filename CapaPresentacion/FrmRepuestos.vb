@@ -75,6 +75,8 @@ Public Class FrmRepuestos
             TextBoxImg.Text = ""
             ComboBoxMarca.SelectedIndex = 0
             ComboBoxTipo.SelectedIndex = 0
+            LabelMarca.Text = "0"
+            LabelTipo.Text = "0"
             ListarRepuesto()
 
         End If
@@ -96,6 +98,7 @@ Public Class FrmRepuestos
                 TextBoxImg.Text = RepuestoSeleccionado(3)
                 ComboBoxMarca.Text = RepuestoSeleccionado(4)
                 ComboBoxTipo.Text = RepuestoSeleccionado(5)
+                LabelMarca.Text = RepuestoSeleccionado(6)
             Else
                 MsgBox("Debe seleccionar un repuesto primero", MsgBoxStyle.Exclamation, "Alerta")
             End If
@@ -167,7 +170,18 @@ Public Class FrmRepuestos
 
     'Guardar id de los ComboBox
     Private Sub ComboBoxMarca_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComboBoxMarca.SelectedIndexChanged
-        LabelMarca.Text = ComboBoxMarca.SelectedIndex.ToString
+        Marca = New CNMarcas
+        Dim EntidadMarca As New CEMarca
+        Dim Marcas As New ArrayList
+
+        EntidadMarca.Descripcion = ComboBoxMarca.Text
+        Marcas = Marca.ListarMarcaId(EntidadMarca)
+
+        If Not ComboBoxMarca.Text.Equals("Seleccione marca") Then
+            LabelMarca.Text = Marcas.Item(0).ToString
+        End If
+
+
     End Sub
 
     Private Sub ComboBoxTipo_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComboBoxTipo.SelectedIndexChanged
@@ -185,6 +199,7 @@ Public Class FrmRepuestos
         For i As Integer = 0 To Datos.Cells.Count - 1
             RepuestoSeleccionado(i) = Datos.Cells(i).Value.ToString
         Next
+
     End Sub
 
 
@@ -229,6 +244,8 @@ Public Class FrmRepuestos
         TextBoxImg.Text = ""
         ComboBoxMarca.SelectedIndex = 0
         ComboBoxTipo.SelectedIndex = 0
+        LabelMarca.Text = "0"
+        LabelTipo.Text = "0"
         Erase RepuestoSeleccionado
     End Sub
 

@@ -89,6 +89,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CDConexion.vb" />
+    <Compile Include="CDMarca.vb" />
+    <Compile Include="CDRepuestos.vb" />
+    <Compile Include="CDStock.vb" />
+    <Compile Include="CDTipoRepuesto.vb" />
     <Compile Include="CDUsuario.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -115,6 +119,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

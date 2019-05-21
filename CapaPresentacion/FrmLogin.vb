@@ -6,7 +6,9 @@ Public Class FrmLogin
     Dim Usuario As New CNUsuarios
     Dim DatosUsuario As New ArrayList
     Dim EntidadUsuario As New CEUsuario
-    Friend Nombre, Apellido, Rol As String
+    Dim App As New CNAplicacion
+    Dim Nombre, Apellido, Rol As String
+    Dim Id As Integer
 
 
     Private Sub BtnLogin_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnLogin.Click
@@ -26,11 +28,20 @@ Public Class FrmLogin
             DatosUsuario = Usuario.LoginUsuarios(EntidadUsuario)
 
             If DatosUsuario.Count <> 0 Then
+
+                Id = DatosUsuario.Item(0)
                 Nombre = DatosUsuario.Item(1)
                 Apellido = DatosUsuario.Item(2)
                 Rol = DatosUsuario.Item(5)
 
+                Environment.SetEnvironmentVariable("IdSesion", Id)
+                Environment.SetEnvironmentVariable("NombreSesion", Nombre)
+                Environment.SetEnvironmentVariable("ApellidoSesion", Apellido)
+                Environment.SetEnvironmentVariable("RolSesion", Rol)
+
+
                 If Cedula.Equals(DatosUsuario.Item(3)) And Contraseña.Equals(DatosUsuario.Item(4)) Then
+
                     'Limpiar Campos del formulario
                     TxtUsuario.Text = ""
                     TxtContraseña.Text = ""
@@ -64,5 +75,6 @@ Public Class FrmLogin
         Nombre = ""
         Apellido = ""
         Rol = ""
+        Id = 0
     End Sub
 End Class

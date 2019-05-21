@@ -3,27 +3,28 @@
 Public Class FrmIndexAdmin
 
     Dim UsuarioEventos As New CNUsuarios
+    Dim App As New CNAplicacion
 
     'Gestión Usuarios
 
     Private Sub BtnMenuUsuario_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnMenuUsuario.Click
-        UsuarioEventos.CargarVistaRequerida(Me, FrmUsuarios)
+        App.CargarVistaRequerida(Me, FrmUsuarios)
     End Sub
 
     Private Sub TBtnGestionUs_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TBtnGestionUs.Click
-        UsuarioEventos.CargarVistaRequerida(Me, FrmUsuarios)
+        App.CargarVistaRequerida(Me, FrmUsuarios)
     End Sub
 
     'Gestión Repuestos
 
     Private Sub BtnMenuRep_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnMenuRep.Click
-        Me.Hide()
+        App.CargarVistaRequerida(Me, FrmRepuestos)
     End Sub
 
     'Gestión Stock
 
     Private Sub BtnMenuStock_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnMenuStock.Click
-        Me.Hide()
+        App.CargarVistaRequerida(Me, FrmStock)
     End Sub
 
     'Otros eventos
@@ -35,11 +36,19 @@ Public Class FrmIndexAdmin
 
     'Botón cerrar sesión
     Private Sub LogoutBtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LogoutBtn.Click
-        UsuarioEventos.CerrarSesion(Me, FrmLogin)
+        App.CerrarSesion(Me, FrmLogin)
     End Sub
 
     'Carga de datos de usuario en sesión
     Private Sub FrmIndexAdmin_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        UsuarioEventos.CargarUsuarioEnSesion(TBTSesion, FrmLogin.Nombre, FrmLogin.Apellido, FrmLogin.Rol)
+        App.CargarUsuarioEnSesion(TBTSesion)
+    End Sub
+
+    Private Sub TBTBtnGesRes_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TBTBtnGesRes.Click
+        App.CargarVistaRequerida(Me, FrmRepuestos)
+    End Sub
+
+    Private Sub TBTStkRes_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TBTStkRes.Click
+        App.CargarVistaRequerida(Me, FrmStock)
     End Sub
 End Class

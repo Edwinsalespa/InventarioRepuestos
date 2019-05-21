@@ -30,3 +30,17 @@ C:\Users\Cristhian Forero\Desktop\InventarioRepuestos\CapaDatos\obj\Debug\CapaDa
 C:\Users\Cristhian Forero\Desktop\InventarioRepuestos\CapaDatos\bin\Debug\CapaEntidad.dll
 C:\Users\Cristhian Forero\Desktop\InventarioRepuestos\CapaDatos\bin\Debug\CapaEntidad.pdb
 C:\Users\Cristhian Forero\Desktop\InventarioRepuestos\CapaDatos\bin\Debug\CapaEntidad.xml
+C:\Users\crist\Desktop\InventarioRepuestos\CapaDatos\obj\Debug\CapaDatos.Resources.resources
+C:\Users\crist\Desktop\InventarioRepuestos\CapaDatos\obj\Debug\CapaDatos.vbproj.GenerateResource.Cache
+C:\Users\crist\Desktop\InventarioRepuestos\CapaDatos\bin\Debug\CapaDatos.dll.config
+C:\Users\crist\Desktop\InventarioRepuestos\CapaDatos\bin\Debug\CapaDatos.dll
+C:\Users\crist\Desktop\InventarioRepuestos\CapaDatos\bin\Debug\CapaDatos.pdb
+C:\Users\crist\Desktop\InventarioRepuestos\CapaDatos\bin\Debug\CapaDatos.xml
+C:\Users\crist\Desktop\InventarioRepuestos\CapaDatos\bin\Debug\CapaEntidad.dll
+C:\Users\crist\Desktop\InventarioRepuestos\CapaDatos\bin\Debug\MySql.Data.dll
+C:\Users\crist\Desktop\InventarioRepuestos\CapaDatos\bin\Debug\CapaEntidad.pdb
+C:\Users\crist\Desktop\InventarioRepuestos\CapaDatos\bin\Debug\CapaEntidad.xml
+C:\Users\crist\Desktop\InventarioRepuestos\CapaDatos\obj\Debug\CapaDatos.vbprojResolveAssemblyReference.cache
+C:\Users\crist\Desktop\InventarioRepuestos\CapaDatos\obj\Debug\CapaDatos.dll
+C:\Users\crist\Desktop\InventarioRepuestos\CapaDatos\obj\Debug\CapaDatos.xml
+C:\Users\crist\Desktop\InventarioRepuestos\CapaDatos\obj\Debug\CapaDatos.pdb

@@ -47,7 +47,6 @@ C:\Users\Cristhian Forero\Desktop\InventarioRepuestos\CapaPresentacion\bin\Debug
 C:\Users\Cristhian Forero\Desktop\InventarioRepuestos\CapaPresentacion\bin\Debug\CapaPresentacion.xml
 C:\Users\Cristhian Forero\Desktop\InventarioRepuestos\CapaPresentacion\bin\Debug\CapaNegocio.dll
 C:\Users\Cristhian Forero\Desktop\InventarioRepuestos\CapaPresentacion\bin\Debug\CapaDatos.dll
-C:\Users\Cristhian Forero\Desktop\InventarioRepuestos\CapaPresentacion\bin\Debug\MySql.Data.dll
 C:\Users\Cristhian Forero\Desktop\InventarioRepuestos\CapaPresentacion\bin\Debug\CapaNegocio.pdb
 C:\Users\Cristhian Forero\Desktop\InventarioRepuestos\CapaPresentacion\bin\Debug\CapaNegocio.xml
 C:\Users\Cristhian Forero\Desktop\InventarioRepuestos\CapaPresentacion\bin\Debug\CapaDatos.pdb
@@ -62,3 +61,36 @@ C:\Users\Cristhian Forero\Desktop\InventarioRepuestos\CapaPresentacion\obj\x86\D
 C:\Users\Cristhian Forero\Desktop\InventarioRepuestos\CapaPresentacion\bin\Debug\CapaEntidad.dll
 C:\Users\Cristhian Forero\Desktop\InventarioRepuestos\CapaPresentacion\bin\Debug\CapaEntidad.pdb
 C:\Users\Cristhian Forero\Desktop\InventarioRepuestos\CapaPresentacion\bin\Debug\CapaEntidad.xml
+C:\Users\Cristhian Forero\Desktop\InventarioRepuestos\CapaPresentacion\bin\Debug\InventarioRepuestos.sdf
+C:\Users\Cristhian Forero\Desktop\InventarioRepuestos\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmRepuestos.resources
+C:\Users\Cristhian Forero\Desktop\InventarioRepuestos\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmDetalleRepuesto.resources
+C:\Users\Cristhian Forero\Desktop\InventarioRepuestos\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmNuevaMarca.resources
+C:\Users\Cristhian Forero\Desktop\InventarioRepuestos\CapaPresentacion\bin\Debug\MySql.Data.dll
+C:\Users\crist\Desktop\InventarioRepuestos\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmDetalleRepuesto.resources
+C:\Users\crist\Desktop\InventarioRepuestos\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmIndexAdmin.resources
+C:\Users\crist\Desktop\InventarioRepuestos\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmInicioApp.resources
+C:\Users\crist\Desktop\InventarioRepuestos\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmLogin.resources
+C:\Users\crist\Desktop\InventarioRepuestos\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmNuevaMarca.resources
+C:\Users\crist\Desktop\InventarioRepuestos\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmRepuestos.resources
+C:\Users\crist\Desktop\InventarioRepuestos\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmUsuarios.resources
+C:\Users\crist\Desktop\InventarioRepuestos\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Resources.resources
+C:\Users\crist\Desktop\InventarioRepuestos\CapaPresentacion\obj\x86\Debug\CapaPresentacion.vbproj.GenerateResource.Cache
+C:\Users\crist\Desktop\InventarioRepuestos\CapaPresentacion\bin\Debug\CapaPresentacion.exe.config
+C:\Users\crist\Desktop\InventarioRepuestos\CapaPresentacion\bin\Debug\CapaPresentacion.exe
+C:\Users\crist\Desktop\InventarioRepuestos\CapaPresentacion\bin\Debug\CapaPresentacion.pdb
+C:\Users\crist\Desktop\InventarioRepuestos\CapaPresentacion\bin\Debug\CapaPresentacion.xml
+C:\Users\crist\Desktop\InventarioRepuestos\CapaPresentacion\bin\Debug\CapaEntidad.dll
+C:\Users\crist\Desktop\InventarioRepuestos\CapaPresentacion\bin\Debug\CapaNegocio.dll
+C:\Users\crist\Desktop\InventarioRepuestos\CapaPresentacion\bin\Debug\CapaDatos.dll
+C:\Users\crist\Desktop\InventarioRepuestos\CapaPresentacion\bin\Debug\MySql.Data.dll
+C:\Users\crist\Desktop\InventarioRepuestos\CapaPresentacion\bin\Debug\CapaEntidad.pdb
+C:\Users\crist\Desktop\InventarioRepuestos\CapaPresentacion\bin\Debug\CapaEntidad.xml
+C:\Users\crist\Desktop\InventarioRepuestos\CapaPresentacion\bin\Debug\CapaNegocio.pdb
+C:\Users\crist\Desktop\InventarioRepuestos\CapaPresentacion\bin\Debug\CapaNegocio.xml
+C:\Users\crist\Desktop\InventarioRepuestos\CapaPresentacion\bin\Debug\CapaDatos.pdb
+C:\Users\crist\Desktop\InventarioRepuestos\CapaPresentacion\bin\Debug\CapaDatos.xml
+C:\Users\crist\Desktop\InventarioRepuestos\CapaPresentacion\obj\x86\Debug\CapaPresentacion.vbprojResolveAssemblyReference.cache
+C:\Users\crist\Desktop\InventarioRepuestos\CapaPresentacion\obj\x86\Debug\CapaPresentacion.exe
+C:\Users\crist\Desktop\InventarioRepuestos\CapaPresentacion\obj\x86\Debug\CapaPresentacion.xml
+C:\Users\crist\Desktop\InventarioRepuestos\CapaPresentacion\obj\x86\Debug\CapaPresentacion.pdb
+C:\Users\crist\Desktop\InventarioRepuestos\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmStock.resources

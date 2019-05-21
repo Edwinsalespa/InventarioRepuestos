@@ -81,6 +81,11 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CNAplicacion.vb" />
+    <Compile Include="CNMarcas.vb" />
+    <Compile Include="CNRepuestos.vb" />
+    <Compile Include="CNStock.vb" />
+    <Compile Include="CNTipoRepuestos.vb" />
     <Compile Include="CNUsuarios.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">

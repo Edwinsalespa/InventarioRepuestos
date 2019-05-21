@@ -27,7 +27,6 @@ C:\Users\Cristhian Forero\Desktop\InventarioRepuestos\CapaNegocio\bin\Debug\Capa
 C:\Users\Cristhian Forero\Desktop\InventarioRepuestos\CapaNegocio\bin\Debug\CapaNegocio.pdb
 C:\Users\Cristhian Forero\Desktop\InventarioRepuestos\CapaNegocio\bin\Debug\CapaNegocio.xml
 C:\Users\Cristhian Forero\Desktop\InventarioRepuestos\CapaNegocio\bin\Debug\CapaDatos.dll
-C:\Users\Cristhian Forero\Desktop\InventarioRepuestos\CapaNegocio\bin\Debug\MySql.Data.dll
 C:\Users\Cristhian Forero\Desktop\InventarioRepuestos\CapaNegocio\bin\Debug\CapaDatos.pdb
 C:\Users\Cristhian Forero\Desktop\InventarioRepuestos\CapaNegocio\bin\Debug\CapaDatos.xml
 C:\Users\Cristhian Forero\Desktop\InventarioRepuestos\CapaNegocio\obj\Debug\CapaNegocio.vbprojResolveAssemblyReference.cache
@@ -39,3 +38,20 @@ C:\Users\Cristhian Forero\Desktop\InventarioRepuestos\CapaNegocio\obj\Debug\Capa
 C:\Users\Cristhian Forero\Desktop\InventarioRepuestos\CapaNegocio\bin\Debug\CapaEntidad.dll
 C:\Users\Cristhian Forero\Desktop\InventarioRepuestos\CapaNegocio\bin\Debug\CapaEntidad.pdb
 C:\Users\Cristhian Forero\Desktop\InventarioRepuestos\CapaNegocio\bin\Debug\CapaEntidad.xml
+C:\Users\Cristhian Forero\Desktop\InventarioRepuestos\CapaNegocio\bin\Debug\MySql.Data.dll
+C:\Users\crist\Desktop\InventarioRepuestos\CapaNegocio\obj\Debug\CapaNegocio.Resources.resources
+C:\Users\crist\Desktop\InventarioRepuestos\CapaNegocio\obj\Debug\CapaNegocio.vbproj.GenerateResource.Cache
+C:\Users\crist\Desktop\InventarioRepuestos\CapaNegocio\bin\Debug\CapaNegocio.dll
+C:\Users\crist\Desktop\InventarioRepuestos\CapaNegocio\bin\Debug\CapaNegocio.pdb
+C:\Users\crist\Desktop\InventarioRepuestos\CapaNegocio\bin\Debug\CapaNegocio.xml
+C:\Users\crist\Desktop\InventarioRepuestos\CapaNegocio\bin\Debug\CapaDatos.dll
+C:\Users\crist\Desktop\InventarioRepuestos\CapaNegocio\bin\Debug\CapaEntidad.dll
+C:\Users\crist\Desktop\InventarioRepuestos\CapaNegocio\bin\Debug\MySql.Data.dll
+C:\Users\crist\Desktop\InventarioRepuestos\CapaNegocio\bin\Debug\CapaDatos.pdb
+C:\Users\crist\Desktop\InventarioRepuestos\CapaNegocio\bin\Debug\CapaDatos.xml
+C:\Users\crist\Desktop\InventarioRepuestos\CapaNegocio\bin\Debug\CapaEntidad.pdb
+C:\Users\crist\Desktop\InventarioRepuestos\CapaNegocio\bin\Debug\CapaEntidad.xml
+C:\Users\crist\Desktop\InventarioRepuestos\CapaNegocio\obj\Debug\CapaNegocio.vbprojResolveAssemblyReference.cache
+C:\Users\crist\Desktop\InventarioRepuestos\CapaNegocio\obj\Debug\CapaNegocio.dll
+C:\Users\crist\Desktop\InventarioRepuestos\CapaNegocio\obj\Debug\CapaNegocio.xml
+C:\Users\crist\Desktop\InventarioRepuestos\CapaNegocio\obj\Debug\CapaNegocio.pdb

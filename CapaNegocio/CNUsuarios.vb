@@ -4,6 +4,7 @@ Imports CapaEntidad
 Public Class CNUsuarios
 
     Dim Usuario As CDUsuario
+    Dim App As CNAplicacion
 
     'Petición y envio de Datos a la Capa Datos    
 
@@ -38,13 +39,7 @@ Public Class CNUsuarios
         Usuario = New CDUsuario
         Return Usuario.LoginUsuarios(EntidadUsuario)
     End Function
-
-    'Peticiones para cargar vistas
-    Sub CerrarSesion(ByVal FormularioCerrar, ByVal FormularioCargar)
-        If MsgBox("¿Desea cerrar sesión?", vbYesNo + vbExclamation, "Advertencia") = vbYes Then
-            CargarVistaRequerida(FormularioCerrar, FormularioCargar)
-        End If
-    End Sub
+    
 
     'Encriptacion de Contraseñas
     Function CodificarContraseña(ByVal Opcion As String, ByVal Contraseña As String) As String
@@ -52,14 +47,5 @@ Public Class CNUsuarios
         Return Usuario.CodificarContraseña(Opcion, Contraseña)
     End Function
 
-
-    Sub CargarVistaRequerida(ByVal FormularioCerrar, ByVal FormularioCargar)
-        FormularioCargar.Show()
-        FormularioCerrar.Close()
-    End Sub
-
-    Sub CargarUsuarioEnSesion(ByVal Elemento, ByVal Nombre, ByVal Apellido, ByVal Rol)
-        Elemento.DropDownItems.Add(String.Format("Nombre : {0} {1}", Nombre, Apellido))
-        Elemento.DropDownItems.Add(String.Format("Tipo usuario: {0}", Rol))
-    End Sub
+    
 End Class

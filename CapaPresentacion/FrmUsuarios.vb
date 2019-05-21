@@ -5,12 +5,12 @@ Imports CapaEntidad
 Public Class FrmUsuarios
 
     Dim Usuario As CNUsuarios
+    Dim App As New CNAplicacion
     Dim EntidadUsuario As New CEUsuario
     Dim UsuarioSeleccionado(5) As String
-    Dim Editable As Boolean
 
-    Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Editable = False
+    Private Sub FrmUsuarios_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        App.CargarUsuarioEnSesion(TBTSesion1)
         ListarUsuarios()
     End Sub
 
@@ -61,6 +61,7 @@ Public Class FrmUsuarios
             Valido = False
         ElseIf Not MatchCed.Success Then
             MsgBox("El formato del campo cédula no es válido, debe ser númerico", MsgBoxStyle.Exclamation, "¡Advertencia!")
+            TextBoxCedula.Text = ""
             Valido = False
         ElseIf Not Cedula.Length >= 6 Or Not Cedula.Length <= 12 Then
             MsgBox("El campo cédula, debe tener entre 6 y 12 dígitos", MsgBoxStyle.Exclamation, "¡Advertencia!")
@@ -68,9 +69,12 @@ Public Class FrmUsuarios
         ElseIf Not MatchContra.Success Then
             MsgBox("La contraseña debe tener entre 8 y 16 caracteres, al menos un número, al menos una minúscula y al menos una mayúscula. " +
             "Puede tener otros símbolos.", MsgBoxStyle.Exclamation, "!Advertencia!")
+            TextBoxContraseña.Text = ""
+            TextBoxReContraseña.Text = ""
             Valido = False
         ElseIf Not RepetirContraseña.Equals(Contraseña) Then
             MsgBox("El campo repetir contraseña de coincidir con el campo contraseña", MsgBoxStyle.Exclamation, "¡Advertencia!")
+            TextBoxReContraseña.Text = ""
             Valido = False
         Else
             Valido = True
@@ -79,54 +83,38 @@ Public Class FrmUsuarios
         'Envio de datos
 
         If Valido Then
-            EntidadUsuario.Nombre = Nombre
-            EntidadUsuario.Apellido = Apellido
+            EntidadUsuario.Nombre = Nombre.ToUpper
+            EntidadUsuario.Apellido = Apellido.ToUpper
             EntidadUsuario.Cedula = Integer.Parse(Cedula)
             EntidadUsuario.Contraseña = Contraseña
 
-            If Editable Then
-                EntidadUsuario.IdUsuario = Integer.Parse(LabelId.Text)
-                Usuario.ActualizarUsuario(EntidadUsuario)
-            Else
+            If BtnRegUsuario.Text.Equals("REGISTRAR") Then
                 Usuario.RegistroUsuario(EntidadUsuario)
+            Else
+                EntidadUsuario.IdUsuario = Integer.Parse(UsuarioSeleccionado(0))
+                Usuario.ActualizarUsuario(EntidadUsuario)
+                GroupBox1.Text = "Registrar usuario"
+                BtnRegUsuario.Text = "REGISTRAR"
+                Erase UsuarioSeleccionado
             End If
+
 
             TextBoxNombre.Text = ""
             TextBoxApellido.Text = ""
             TextBoxCedula.Text = ""
             TextBoxContraseña.Text = ""
             TextBoxReContraseña.Text = ""
-            Editable = False
-            GroupBox1.Text = "Crear usuarios"
-            BtnRegUsuario.Text = "REGISTRAR"
-            LabelId.Text = ""
             ListarUsuarios()
 
         End If
 
     End Sub
 
-    'Editar Usuario
-
-    Sub EditarUsuario()
-        Usuario = New CNUsuarios
-        GroupBox1.Text = "Editar usuario"
-        BtnRegUsuario.Text = "ACTUALIZAR"
-        TextBoxNombre.Text = UsuarioSeleccionado(1)
-        TextBoxApellido.Text = UsuarioSeleccionado(2)
-        TextBoxCedula.Text = UsuarioSeleccionado(3)
-        TextBoxContraseña.Text = Usuario.CodificarContraseña(2, UsuarioSeleccionado(4))
-        TextBoxReContraseña.Text = TextBoxContraseña.Text
-        Editable = True
-    End Sub
-
-
     'Eliminar Usuario
-    Sub EliminarUsuario()
+    Sub EliminarUsuario(ByVal Id As Integer)
         Usuario = New CNUsuarios
-        EntidadUsuario.IdUsuario = Integer.Parse(LabelId.Text)
+        EntidadUsuario.IdUsuario = Id
         Usuario.EliminarUsuario(EntidadUsuario)
-        LabelId.Text = ""
         ListarUsuarios()
     End Sub
 
@@ -137,47 +125,53 @@ Public Class FrmUsuarios
 
     'Botón de editar
     Private Sub BtnEditar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnEditar.Click
-        If Not String.IsNullOrEmpty(UsuarioSeleccionado(0)) Then
-            EditarUsuario()
-        Else
+        Try
+            If Not String.IsNullOrEmpty(UsuarioSeleccionado(0)) Then
+                GroupBox1.Text = "Editar usuario"
+                BtnRegUsuario.Text = "ACTUALIZAR"
+                TextBoxNombre.Text = UsuarioSeleccionado(1)
+                TextBoxApellido.Text = UsuarioSeleccionado(2)
+                TextBoxCedula.Text = UsuarioSeleccionado(3)
+                TextBoxContraseña.Text = Usuario.CodificarContraseña(2, UsuarioSeleccionado(4))
+                TextBoxReContraseña.Text = TextBoxContraseña.Text
+            Else
+                MsgBox("Debe seleccionar un usuario primero", MsgBoxStyle.Exclamation, "Alerta")
+            End If
+        Catch ex As Exception
             MsgBox("Debe seleccionar un usuario primero", MsgBoxStyle.Exclamation, "Alerta")
-        End If
+        End Try
     End Sub
 
     'Botón de eliminar
     Private Sub BtnEliminar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnEliminar.Click
-        If Not String.IsNullOrEmpty(UsuarioSeleccionado(0)) Then
-            If Not UsuarioSeleccionado(5).Equals("ADMIN") Then
-                If MsgBox("¿Desea eliminar el usuario " + UsuarioSeleccionado(1) + "?", vbYesNo + vbExclamation, "Advertencia") = vbYes Then
-                    EliminarUsuario()
+        Try
+            If Not String.IsNullOrEmpty(UsuarioSeleccionado(0)) Then
+                If Not UsuarioSeleccionado(5).Equals("ADMIN") Then
+                    If MsgBox("¿Desea eliminar el usuario " + UsuarioSeleccionado(1) + "?", vbYesNo + vbExclamation, "Advertencia") = vbYes Then
+                        EliminarUsuario(Integer.Parse(UsuarioSeleccionado(0)))
+                        Erase UsuarioSeleccionado
+                    End If
+                Else
+                    MsgBox("No se puede eliminar el administrador", MsgBoxStyle.Exclamation, "Alerta")
                 End If
             Else
-                MsgBox("No se puede eliminar el administrador", MsgBoxStyle.Exclamation, "Alerta")
+                MsgBox("Debe seleccionar un usuario primero", MsgBoxStyle.Exclamation, "Alerta")
             End If
-        Else
+        Catch ex As Exception
             MsgBox("Debe seleccionar un usuario primero", MsgBoxStyle.Exclamation, "Alerta")
-        End If
+        End Try
+        
     End Sub
 
     'Al seleccionar una fila de la tabla
     Private Sub DataGridViewUsuarios_CellClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridViewUsuarios.CellClick
         Dim dgv As DataGridViewRow = DataGridViewUsuarios.Rows(e.RowIndex)
         Seleccionado(dgv)
-
-        TextBoxNombre.Text = ""
-        TextBoxApellido.Text = ""
-        TextBoxCedula.Text = ""
-        TextBoxContraseña.Text = ""
-        TextBoxReContraseña.Text = ""
-        GroupBox1.Text = "Crear usuarios"
-        BtnRegUsuario.Text = "REGISTRAR"
-
     End Sub
 
     'Guardar Usuario seleccionado
     Sub Seleccionado(ByVal Datos As DataGridViewRow)
-        LabelId.Text = Datos.Cells(0).Value.ToString
-
+        ReDim UsuarioSeleccionado(5)
         For i As Integer = 0 To Datos.Cells.Count - 1
             UsuarioSeleccionado(i) = Datos.Cells(i).Value.ToString
         Next
@@ -188,29 +182,32 @@ Public Class FrmUsuarios
     'Botón de inicio
     Private Sub TBTBtnInicio_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TBTBtnInicio.Click
         Usuario = New CNUsuarios
-        Usuario.CargarVistaRequerida(Me, FrmIndexAdmin)
-    End Sub
-
-    'Carga de datos de usuario en sesión
-    Private Sub FrmIndexAdmin_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Usuario = New CNUsuarios
-        Usuario.CargarUsuarioEnSesion(TBTSesion, FrmLogin.Nombre, FrmLogin.Apellido, FrmLogin.Rol)
+        App.CargarVistaRequerida(Me, FrmIndexAdmin)
     End Sub
 
     'Botón cerrar sesión
     Private Sub LogoutBtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LogoutBtn.Click
         Usuario = New CNUsuarios
-        Usuario.CerrarSesion(Me, FrmLogin)
+        App.CerrarSesion(Me, FrmLogin)
     End Sub
 
     'Botón cancelar
     Private Sub BtnCancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnCancelar.Click
+        GroupBox1.Text = "Registrar usuario"
+        BtnRegUsuario.Text = "REGISTRAR"
         TextBoxNombre.Text = ""
         TextBoxApellido.Text = ""
         TextBoxCedula.Text = ""
         TextBoxContraseña.Text = ""
         TextBoxReContraseña.Text = ""
-        GroupBox1.Text = "Crear usuarios"
-        BtnRegUsuario.Text = "REGISTRAR"
+        Erase UsuarioSeleccionado
+    End Sub
+
+    Private Sub TBTBtnGesRes_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TBTBtnGesRes.Click
+        App.CargarVistaRequerida(Me, FrmRepuestos)
+    End Sub
+
+    Private Sub TBTStkRes_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TBTStkRes.Click
+        App.CargarVistaRequerida(Me, FrmStock)
     End Sub
 End Class

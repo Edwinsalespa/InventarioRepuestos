@@ -63,6 +63,16 @@ Namespace My
                 Return CType(Me("InventarioRepuestosConnectionString"),String)
             End Get
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Server=localhost; Port=3306; Database=inventario_repuestos; Uid=root; Pwd=usbw")>  _
+        Public ReadOnly Property MYSQLConnectionString() As String
+            Get
+                Return CType(Me("MYSQLConnectionString"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 

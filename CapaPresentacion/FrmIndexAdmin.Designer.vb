@@ -24,24 +24,24 @@ Partial Class FrmIndexAdmin
     Private Sub InitializeComponent()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
+        Me.TBTBtnInicio = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.TBtnGestionUs = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.TBTBtnGesRes = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
+        Me.LogoutBtn = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
+        Me.TBTSesion = New System.Windows.Forms.ToolStripSplitButton()
+        Me.TBTStkRes = New System.Windows.Forms.ToolStripButton()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.BtnMenuStock = New System.Windows.Forms.Button()
         Me.BtnMenuUsuario = New System.Windows.Forms.Button()
         Me.BtnMenuRep = New System.Windows.Forms.Button()
-        Me.TBTBtnInicio = New System.Windows.Forms.ToolStripButton()
-        Me.TBtnGestionUs = New System.Windows.Forms.ToolStripButton()
-        Me.TBTBtnGesRes = New System.Windows.Forms.ToolStripButton()
-        Me.LogoutBtn = New System.Windows.Forms.ToolStripButton()
-        Me.TBTSesion = New System.Windows.Forms.ToolStripSplitButton()
-        Me.TBTStkRes = New System.Windows.Forms.ToolStripButton()
         Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -67,11 +67,43 @@ Partial Class FrmIndexAdmin
         Me.ToolStripLabel1.Size = New System.Drawing.Size(71, 34)
         Me.ToolStripLabel1.Text = "Inventario"
         '
+        'ToolStripSeparator4
+        '
+        Me.ToolStripSeparator4.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 37)
+        '
+        'TBTBtnInicio
+        '
+        Me.TBTBtnInicio.BackColor = System.Drawing.Color.MidnightBlue
+        Me.TBTBtnInicio.ForeColor = System.Drawing.Color.White
+        Me.TBTBtnInicio.Image = Global.CapaPresentacion.My.Resources.Resources.home_icon_silhouette
+        Me.TBTBtnInicio.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.TBTBtnInicio.Margin = New System.Windows.Forms.Padding(3, 1, 2, 2)
+        Me.TBTBtnInicio.Name = "TBTBtnInicio"
+        Me.TBTBtnInicio.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
+        Me.TBTBtnInicio.Size = New System.Drawing.Size(62, 34)
+        Me.TBTBtnInicio.Text = "Inicio"
+        Me.TBTBtnInicio.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
         Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 37)
+        '
+        'TBtnGestionUs
+        '
+        Me.TBtnGestionUs.BackColor = System.Drawing.Color.MidnightBlue
+        Me.TBtnGestionUs.ForeColor = System.Drawing.Color.White
+        Me.TBtnGestionUs.Image = Global.CapaPresentacion.My.Resources.Resources.multiple_users_silhouette
+        Me.TBtnGestionUs.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.TBtnGestionUs.Margin = New System.Windows.Forms.Padding(3, 1, 2, 2)
+        Me.TBtnGestionUs.Name = "TBtnGestionUs"
+        Me.TBtnGestionUs.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
+        Me.TBtnGestionUs.Size = New System.Drawing.Size(136, 34)
+        Me.TBtnGestionUs.Text = "Gestión de usuarios"
+        Me.TBtnGestionUs.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         '
         'ToolStripSeparator2
         '
@@ -79,16 +111,64 @@ Partial Class FrmIndexAdmin
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
         Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 37)
         '
+        'TBTBtnGesRes
+        '
+        Me.TBTBtnGesRes.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.TBTBtnGesRes.Image = Global.CapaPresentacion.My.Resources.Resources.screwdriver_and_wrench_crossed
+        Me.TBTBtnGesRes.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.TBTBtnGesRes.Margin = New System.Windows.Forms.Padding(3, 1, 2, 2)
+        Me.TBTBtnGesRes.Name = "TBTBtnGesRes"
+        Me.TBTBtnGesRes.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
+        Me.TBTBtnGesRes.Size = New System.Drawing.Size(143, 34)
+        Me.TBTBtnGesRes.Text = "Gestión de repuestos"
+        Me.TBTBtnGesRes.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        '
         'ToolStripSeparator3
         '
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
         Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 37)
+        '
+        'LogoutBtn
+        '
+        Me.LogoutBtn.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.LogoutBtn.AutoSize = False
+        Me.LogoutBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.LogoutBtn.Image = Global.CapaPresentacion.My.Resources.Resources.logout
+        Me.LogoutBtn.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.LogoutBtn.Margin = New System.Windows.Forms.Padding(3, 1, 6, 2)
+        Me.LogoutBtn.Name = "LogoutBtn"
+        Me.LogoutBtn.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
+        Me.LogoutBtn.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.LogoutBtn.Size = New System.Drawing.Size(35, 34)
+        Me.LogoutBtn.Text = "Cerrar sesión"
         '
         'ToolStripSeparator5
         '
         Me.ToolStripSeparator5.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
         Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
         Me.ToolStripSeparator5.Size = New System.Drawing.Size(6, 37)
+        '
+        'TBTSesion
+        '
+        Me.TBTSesion.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.TBTSesion.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.TBTSesion.Image = Global.CapaPresentacion.My.Resources.Resources.user
+        Me.TBTSesion.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.TBTSesion.Name = "TBTSesion"
+        Me.TBTSesion.Size = New System.Drawing.Size(36, 34)
+        Me.TBTSesion.Text = "Usuario en sesión"
+        '
+        'TBTStkRes
+        '
+        Me.TBTStkRes.ForeColor = System.Drawing.Color.White
+        Me.TBTStkRes.Image = Global.CapaPresentacion.My.Resources.Resources.worker_loading_boxes
+        Me.TBTStkRes.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.TBTStkRes.Margin = New System.Windows.Forms.Padding(3, 1, 2, 2)
+        Me.TBTStkRes.Name = "TBTStkRes"
+        Me.TBTStkRes.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
+        Me.TBTStkRes.Size = New System.Drawing.Size(135, 34)
+        Me.TBTStkRes.Text = "Stock de Repuestos"
+        Me.TBTStkRes.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         '
         'Label1
         '
@@ -130,12 +210,6 @@ Partial Class FrmIndexAdmin
         Me.Label4.TabIndex = 8
         Me.Label4.Text = "Stock de Repuestos"
         '
-        'ToolStripSeparator4
-        '
-        Me.ToolStripSeparator4.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
-        Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 37)
-        '
         'BtnMenuStock
         '
         Me.BtnMenuStock.BackColor = System.Drawing.Color.White
@@ -169,80 +243,6 @@ Partial Class FrmIndexAdmin
         Me.BtnMenuRep.Size = New System.Drawing.Size(187, 150)
         Me.BtnMenuRep.TabIndex = 2
         Me.BtnMenuRep.UseVisualStyleBackColor = False
-        '
-        'TBTBtnInicio
-        '
-        Me.TBTBtnInicio.BackColor = System.Drawing.Color.MidnightBlue
-        Me.TBTBtnInicio.ForeColor = System.Drawing.Color.White
-        Me.TBTBtnInicio.Image = Global.CapaPresentacion.My.Resources.Resources.home_icon_silhouette
-        Me.TBTBtnInicio.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.TBTBtnInicio.Margin = New System.Windows.Forms.Padding(3, 1, 2, 2)
-        Me.TBTBtnInicio.Name = "TBTBtnInicio"
-        Me.TBTBtnInicio.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
-        Me.TBTBtnInicio.Size = New System.Drawing.Size(62, 34)
-        Me.TBTBtnInicio.Text = "Inicio"
-        Me.TBTBtnInicio.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        '
-        'TBtnGestionUs
-        '
-        Me.TBtnGestionUs.BackColor = System.Drawing.Color.MidnightBlue
-        Me.TBtnGestionUs.ForeColor = System.Drawing.Color.White
-        Me.TBtnGestionUs.Image = Global.CapaPresentacion.My.Resources.Resources.multiple_users_silhouette
-        Me.TBtnGestionUs.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.TBtnGestionUs.Margin = New System.Windows.Forms.Padding(3, 1, 2, 2)
-        Me.TBtnGestionUs.Name = "TBtnGestionUs"
-        Me.TBtnGestionUs.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
-        Me.TBtnGestionUs.Size = New System.Drawing.Size(136, 34)
-        Me.TBtnGestionUs.Text = "Gestión de usuarios"
-        Me.TBtnGestionUs.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        '
-        'TBTBtnGesRes
-        '
-        Me.TBTBtnGesRes.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.TBTBtnGesRes.Image = Global.CapaPresentacion.My.Resources.Resources.screwdriver_and_wrench_crossed
-        Me.TBTBtnGesRes.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.TBTBtnGesRes.Margin = New System.Windows.Forms.Padding(3, 1, 2, 2)
-        Me.TBTBtnGesRes.Name = "TBTBtnGesRes"
-        Me.TBTBtnGesRes.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
-        Me.TBTBtnGesRes.Size = New System.Drawing.Size(143, 34)
-        Me.TBTBtnGesRes.Text = "Gestión de repuestos"
-        Me.TBTBtnGesRes.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        '
-        'LogoutBtn
-        '
-        Me.LogoutBtn.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.LogoutBtn.AutoSize = False
-        Me.LogoutBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.LogoutBtn.Image = Global.CapaPresentacion.My.Resources.Resources.logout
-        Me.LogoutBtn.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.LogoutBtn.Margin = New System.Windows.Forms.Padding(3, 1, 6, 2)
-        Me.LogoutBtn.Name = "LogoutBtn"
-        Me.LogoutBtn.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
-        Me.LogoutBtn.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.LogoutBtn.Size = New System.Drawing.Size(35, 34)
-        Me.LogoutBtn.Text = "Cerrar sesión"
-        '
-        'TBTSesion
-        '
-        Me.TBTSesion.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.TBTSesion.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.TBTSesion.Image = Global.CapaPresentacion.My.Resources.Resources.user
-        Me.TBTSesion.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.TBTSesion.Name = "TBTSesion"
-        Me.TBTSesion.Size = New System.Drawing.Size(36, 34)
-        Me.TBTSesion.Text = "Usuario en sesión"
-        '
-        'TBTStkRes
-        '
-        Me.TBTStkRes.ForeColor = System.Drawing.Color.White
-        Me.TBTStkRes.Image = Global.CapaPresentacion.My.Resources.Resources.worker_loading_boxes
-        Me.TBTStkRes.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.TBTStkRes.Margin = New System.Windows.Forms.Padding(3, 1, 2, 2)
-        Me.TBTStkRes.Name = "TBTStkRes"
-        Me.TBTStkRes.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
-        Me.TBTStkRes.Size = New System.Drawing.Size(135, 34)
-        Me.TBTStkRes.Text = "Stock de Repuestos"
-        Me.TBTStkRes.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         '
         'FrmIndexAdmin
         '

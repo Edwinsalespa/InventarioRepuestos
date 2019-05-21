@@ -50,7 +50,6 @@ Partial Class FrmInicioApp
         Me.Controls.Add(Me.ProgressBar1)
         Me.Controls.Add(Me.Label1)
         Me.Name = "FrmInicioApp"
-        Me.Text = "FrmInicioApp"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

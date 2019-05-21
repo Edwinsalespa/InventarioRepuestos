@@ -90,6 +90,12 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmDetalleRepuesto.Designer.vb">
+      <DependentUpon>FrmDetalleRepuesto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDetalleRepuesto.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmIndexAdmin.Designer.vb">
       <DependentUpon>FrmIndexAdmin.vb</DependentUpon>
     </Compile>
@@ -112,6 +118,24 @@
       <DependentUpon>FrmLogin.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNuevaMarca.Designer.vb">
+      <DependentUpon>FrmNuevaMarca.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmNuevaMarca.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRepuestos.Designer.vb">
+      <DependentUpon>FrmRepuestos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRepuestos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStock.Designer.vb">
+      <DependentUpon>FrmStock.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmStock.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmUsuarios.vb">
@@ -138,6 +162,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FrmDetalleRepuesto.resx">
+      <DependentUpon>FrmDetalleRepuesto.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmIndexAdmin.resx">
       <DependentUpon>FrmIndexAdmin.vb</DependentUpon>
     </EmbeddedResource>
@@ -146,6 +173,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNuevaMarca.resx">
+      <DependentUpon>FrmNuevaMarca.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRepuestos.resx">
+      <DependentUpon>FrmRepuestos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStock.resx">
+      <DependentUpon>FrmStock.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmUsuarios.resx">
       <DependentUpon>FrmUsuarios.vb</DependentUpon>

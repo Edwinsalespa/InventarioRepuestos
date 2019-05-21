@@ -22,9 +22,9 @@ Partial Class FrmUsuarios
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.DataGridViewUsuarios = New System.Windows.Forms.DataGridView()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
@@ -38,7 +38,7 @@ Partial Class FrmUsuarios
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.LogoutBtn = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
-        Me.TBTSesion = New System.Windows.Forms.ToolStripSplitButton()
+        Me.TBTSesion1 = New System.Windows.Forms.ToolStripSplitButton()
         Me.TBTStkRes = New System.Windows.Forms.ToolStripButton()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.BtnCancelar = New System.Windows.Forms.Button()
@@ -55,7 +55,6 @@ Partial Class FrmUsuarios
         Me.Label2 = New System.Windows.Forms.Label()
         Me.BtnEditar = New System.Windows.Forms.Button()
         Me.BtnEliminar = New System.Windows.Forms.Button()
-        Me.LabelId = New System.Windows.Forms.Label()
         CType(Me.DataGridViewUsuarios, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -70,14 +69,14 @@ Partial Class FrmUsuarios
         Me.DataGridViewUsuarios.BackgroundColor = System.Drawing.Color.GhostWhite
         Me.DataGridViewUsuarios.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DataGridViewUsuarios.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle7.BackColor = System.Drawing.Color.MidnightBlue
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.AliceBlue
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewUsuarios.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.MidnightBlue
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.AliceBlue
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewUsuarios.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridViewUsuarios.ColumnHeadersHeight = 30
         Me.DataGridViewUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.DataGridViewUsuarios.EnableHeadersVisualStyles = False
@@ -85,22 +84,22 @@ Partial Class FrmUsuarios
         Me.DataGridViewUsuarios.Location = New System.Drawing.Point(12, 136)
         Me.DataGridViewUsuarios.Name = "DataGridViewUsuarios"
         Me.DataGridViewUsuarios.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.Color.GhostWhite
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.DarkGray
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.SteelBlue
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewUsuarios.RowHeadersDefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.GhostWhite
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.DarkGray
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewUsuarios.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridViewUsuarios.RowHeadersVisible = False
         Me.DataGridViewUsuarios.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
-        DataGridViewCellStyle9.BackColor = System.Drawing.Color.GhostWhite
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.SteelBlue
-        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White
-        Me.DataGridViewUsuarios.RowsDefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.GhostWhite
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White
+        Me.DataGridViewUsuarios.RowsDefaultCellStyle = DataGridViewCellStyle3
         Me.DataGridViewUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridViewUsuarios.Size = New System.Drawing.Size(406, 251)
         Me.DataGridViewUsuarios.TabIndex = 0
@@ -120,7 +119,7 @@ Partial Class FrmUsuarios
         Me.ToolStrip1.AutoSize = False
         Me.ToolStrip1.BackColor = System.Drawing.Color.MidnightBlue
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel1, Me.ToolStripSeparator4, Me.TBTBtnInicio, Me.ToolStripSeparator1, Me.TBtnGestionUs, Me.ToolStripSeparator2, Me.TBTBtnGesRes, Me.ToolStripSeparator3, Me.LogoutBtn, Me.ToolStripSeparator5, Me.TBTSesion, Me.TBTStkRes})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel1, Me.ToolStripSeparator4, Me.TBTBtnInicio, Me.ToolStripSeparator1, Me.TBtnGestionUs, Me.ToolStripSeparator2, Me.TBTBtnGesRes, Me.ToolStripSeparator3, Me.LogoutBtn, Me.ToolStripSeparator5, Me.TBTSesion1, Me.TBTStkRes})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(3, 4, 1, 4)
@@ -218,15 +217,15 @@ Partial Class FrmUsuarios
         Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
         Me.ToolStripSeparator5.Size = New System.Drawing.Size(6, 37)
         '
-        'TBTSesion
+        'TBTSesion1
         '
-        Me.TBTSesion.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.TBTSesion.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.TBTSesion.Image = Global.CapaPresentacion.My.Resources.Resources.user
-        Me.TBTSesion.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.TBTSesion.Name = "TBTSesion"
-        Me.TBTSesion.Size = New System.Drawing.Size(36, 34)
-        Me.TBTSesion.Text = "Usuario en sesión"
+        Me.TBTSesion1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.TBTSesion1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.TBTSesion1.Image = Global.CapaPresentacion.My.Resources.Resources.user
+        Me.TBTSesion1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.TBTSesion1.Name = "TBTSesion1"
+        Me.TBTSesion1.Size = New System.Drawing.Size(36, 34)
+        Me.TBTSesion1.Text = "Usuario en sesión"
         '
         'TBTStkRes
         '
@@ -270,7 +269,7 @@ Partial Class FrmUsuarios
         Me.BtnCancelar.Location = New System.Drawing.Point(175, 253)
         Me.BtnCancelar.Name = "BtnCancelar"
         Me.BtnCancelar.Size = New System.Drawing.Size(131, 39)
-        Me.BtnCancelar.TabIndex = 8
+        Me.BtnCancelar.TabIndex = 7
         Me.BtnCancelar.Text = "CANCELAR"
         Me.BtnCancelar.UseVisualStyleBackColor = False
         '
@@ -281,7 +280,7 @@ Partial Class FrmUsuarios
         Me.BtnRegUsuario.Location = New System.Drawing.Point(18, 253)
         Me.BtnRegUsuario.Name = "BtnRegUsuario"
         Me.BtnRegUsuario.Size = New System.Drawing.Size(131, 39)
-        Me.BtnRegUsuario.TabIndex = 10
+        Me.BtnRegUsuario.TabIndex = 6
         Me.BtnRegUsuario.Text = "REGISTRAR"
         Me.BtnRegUsuario.UseVisualStyleBackColor = False
         '
@@ -291,7 +290,7 @@ Partial Class FrmUsuarios
         Me.TextBoxReContraseña.Name = "TextBoxReContraseña"
         Me.TextBoxReContraseña.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TextBoxReContraseña.Size = New System.Drawing.Size(146, 21)
-        Me.TextBoxReContraseña.TabIndex = 9
+        Me.TextBoxReContraseña.TabIndex = 5
         '
         'Label6
         '
@@ -309,7 +308,7 @@ Partial Class FrmUsuarios
         Me.TextBoxContraseña.Name = "TextBoxContraseña"
         Me.TextBoxContraseña.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TextBoxContraseña.Size = New System.Drawing.Size(146, 21)
-        Me.TextBoxContraseña.TabIndex = 7
+        Me.TextBoxContraseña.TabIndex = 4
         '
         'Label5
         '
@@ -326,7 +325,7 @@ Partial Class FrmUsuarios
         Me.TextBoxCedula.Location = New System.Drawing.Point(140, 127)
         Me.TextBoxCedula.Name = "TextBoxCedula"
         Me.TextBoxCedula.Size = New System.Drawing.Size(146, 21)
-        Me.TextBoxCedula.TabIndex = 5
+        Me.TextBoxCedula.TabIndex = 3
         '
         'Label4
         '
@@ -343,7 +342,7 @@ Partial Class FrmUsuarios
         Me.TextBoxApellido.Location = New System.Drawing.Point(140, 86)
         Me.TextBoxApellido.Name = "TextBoxApellido"
         Me.TextBoxApellido.Size = New System.Drawing.Size(146, 21)
-        Me.TextBoxApellido.TabIndex = 3
+        Me.TextBoxApellido.TabIndex = 2
         '
         'Label3
         '
@@ -379,7 +378,7 @@ Partial Class FrmUsuarios
         Me.BtnEditar.Location = New System.Drawing.Point(9, 403)
         Me.BtnEditar.Name = "BtnEditar"
         Me.BtnEditar.Size = New System.Drawing.Size(94, 33)
-        Me.BtnEditar.TabIndex = 5
+        Me.BtnEditar.TabIndex = 8
         Me.BtnEditar.Text = "EDITAR"
         Me.BtnEditar.UseVisualStyleBackColor = False
         '
@@ -390,19 +389,9 @@ Partial Class FrmUsuarios
         Me.BtnEliminar.Location = New System.Drawing.Point(109, 403)
         Me.BtnEliminar.Name = "BtnEliminar"
         Me.BtnEliminar.Size = New System.Drawing.Size(94, 33)
-        Me.BtnEliminar.TabIndex = 6
+        Me.BtnEliminar.TabIndex = 9
         Me.BtnEliminar.Text = "ELIMINAR"
         Me.BtnEliminar.UseVisualStyleBackColor = False
-        '
-        'LabelId
-        '
-        Me.LabelId.AutoSize = True
-        Me.LabelId.Location = New System.Drawing.Point(816, 69)
-        Me.LabelId.Name = "LabelId"
-        Me.LabelId.Size = New System.Drawing.Size(13, 13)
-        Me.LabelId.TabIndex = 7
-        Me.LabelId.Text = "0"
-        Me.LabelId.Visible = False
         '
         'FrmUsuarios
         '
@@ -410,7 +399,6 @@ Partial Class FrmUsuarios
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.GhostWhite
         Me.ClientSize = New System.Drawing.Size(953, 526)
-        Me.Controls.Add(Me.LabelId)
         Me.Controls.Add(Me.BtnEliminar)
         Me.Controls.Add(Me.BtnEditar)
         Me.Controls.Add(Me.GroupBox1)
@@ -418,7 +406,6 @@ Partial Class FrmUsuarios
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.DataGridViewUsuarios)
         Me.Name = "FrmUsuarios"
-        Me.Text = "Form1"
         CType(Me.DataGridViewUsuarios, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
@@ -441,7 +428,7 @@ Partial Class FrmUsuarios
     Friend WithEvents ToolStripSeparator3 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents LogoutBtn As System.Windows.Forms.ToolStripButton
     Friend WithEvents ToolStripSeparator5 As System.Windows.Forms.ToolStripSeparator
-    Friend WithEvents TBTSesion As System.Windows.Forms.ToolStripSplitButton
+    Friend WithEvents TBTSesion1 As System.Windows.Forms.ToolStripSplitButton
     Friend WithEvents TBTStkRes As System.Windows.Forms.ToolStripButton
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents TextBoxNombre As System.Windows.Forms.TextBox
@@ -457,7 +444,6 @@ Partial Class FrmUsuarios
     Friend WithEvents BtnRegUsuario As System.Windows.Forms.Button
     Friend WithEvents BtnEditar As System.Windows.Forms.Button
     Friend WithEvents BtnEliminar As System.Windows.Forms.Button
-    Friend WithEvents LabelId As System.Windows.Forms.Label
     Friend WithEvents BtnCancelar As System.Windows.Forms.Button
 
 End Class

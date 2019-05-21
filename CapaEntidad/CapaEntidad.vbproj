@@ -64,6 +64,9 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CEMarca.vb" />
+    <Compile Include="CERepuesto.vb" />
+    <Compile Include="CEStock.vb" />
     <Compile Include="CEUsuario.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">

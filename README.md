@@ -32,3 +32,12 @@ manejan mediante procedimientos almacenados.
 13. El software de la aplicación utiliza la arquitectura de N-CAPAS (Capa de datos, Capa de
 negocio, Capa Entidad, Capa presentación).
 14. El sistema guarda las contraseñas de usuario con encriptación.
+
+## Modelo entidad relación
+
+![Screenshot from 2019-06-05 16-41-34](https://user-images.githubusercontent.com/40704923/58992573-d049c480-87b0-11e9-8196-4f847a3fbc7d.png)
+
+## Screenshoot
+
+![Screenshot from 2019-06-05 16-44-24](https://user-images.githubusercontent.com/40704923/58992721-35051f00-87b1-11e9-965f-5841052ac3ad.png)
+
